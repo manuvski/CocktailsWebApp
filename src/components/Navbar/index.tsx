@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { FC, useCallback } from "react";
+import { FC } from "react";
 import { Props } from "./types";
 import { useNavigate } from "react-router-dom";
 import {
