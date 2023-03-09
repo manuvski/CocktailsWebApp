@@ -17,20 +17,20 @@ const Welcome: FC = () => {
         muted
         loop
         playsInline
-        src="https://cdn-hogwartslegacy.warnerbrosgames.com/home/hero.mp4?c=b"
+        src="https://joy1.videvo.net/videvo_files/video/free/video0473/large_watermarked/_import_61ce94e176b116.89574203_preview.mp4"
         className="trailer-video"
       />
       <WelcomeMessage>
         {/* Welcome to Harry Potter Web App */}
         <img
-          src="https://fontmeme.com/permalink/230227/0eecad55196fd91ef5f27c6568252660.png"
+          src="https://fontmeme.com/permalink/230309/9103582b463691b20b9c1339674fb593.png"
           alt=""
         />
       </WelcomeMessage>
       <RedirectMessage>
         {/* Please login or create an account to continue */}
         <img
-          src="https://fontmeme.com/permalink/230227/5e7ac541557ac33e2b7befa4126d0a54.png"
+          src="https://fontmeme.com/permalink/230309/5e10a18ac97b9018ca027ba36c3641db.png"
           alt=""
         />
       </RedirectMessage>

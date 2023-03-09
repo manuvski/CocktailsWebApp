@@ -38,7 +38,7 @@ export const ButtonBoxes = styled.div`
 `;
 
 export const WelcomeButtonLogin = styled(Link)`
-display: inline-flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 100px;
@@ -48,7 +48,7 @@ display: inline-flex;
   background-position: center;
   border-radius: 50%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
   margin-left: 10px;
   text-decoration: none;
   position: relative;
@@ -56,6 +56,7 @@ display: inline-flex;
   &:hover {
     transform: scale(1.05);
     background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
   }
 
   span {
@@ -66,7 +67,6 @@ display: inline-flex;
     font-family: oswald;
     text-align: center;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-    
   }
 `;
 
@@ -76,18 +76,20 @@ export const WelcomeButtonSignup = styled(Link)`
   align-items: center;
   width: 100px;
   height: 100px;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/4829/4829066.png");
+  background-image: url("https://cdn-icons-png.flaticon.com/512/9735/9735723.png");
   background-size: cover;
   background-position: center;
   border-radius: 50%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
   margin-left: 10px;
   text-decoration: none;
   position: relative;
 
   &:hover {
     transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
   }
 
   span {
