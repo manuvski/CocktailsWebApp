@@ -8,14 +8,13 @@ export const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.black};
-  background-image: url("https://i.blogs.es/603a33/layer-14/1366_2000.webp");
+  background-image: url("https://image.cnbcfm.com/api/v1/image/106814780-1608603027565-FESTIVE_CAMPFIRE.jpg?v=1608602872&w=1340&h=500&ffmt=webp&vtcrop=y");
   background-size: cover;
 `;
 
 export const Form = styled(DefaultForm)`
   display: flex;
   flex-direction: column;
-  /* background-color: ${({ theme }) => theme.colors.GriffindorRedDark}; */
   background-color: rgba(116, 0, 1, 0.5);
   border-radius: 10px;
   height: 25rem;
