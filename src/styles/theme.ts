@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 //@ts-ignore
-import font from "../assets/fonts/harryPotter.TTF";
 
 const theme = {
   colors: {
@@ -51,14 +50,5 @@ const theme = {
   },
   font: "MyFont",
 };
-
-export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'MyFont';
-    src: url(${font}) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-`;
 
 export default theme;

@@ -9,7 +9,6 @@ import {
   Tittle,
 } from "../../components/Navbar/styles";
 import { CustomNavbar } from "./styles";
-import { GlobalStyle } from "../../styles/theme";
 
 const Navbar: FC<Props> = ({ type = "list" }) => {
   const navigate = useNavigate();
@@ -25,7 +24,6 @@ const Navbar: FC<Props> = ({ type = "list" }) => {
 
   return (
     <>
-      <GlobalStyle />
       <CustomNavbar>
         <Tittle to="/landing">
           <Logoimg></Logoimg>
