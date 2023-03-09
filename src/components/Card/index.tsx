@@ -12,7 +12,7 @@ category
   return (
    <Container>
     <Description> ID: {id} </Description>
-    <Description> Category: {category} </Description>
+    <Description> {category} </Description>
 
    </Container>
   );

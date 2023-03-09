@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
-
-
+border:1px solid white;
 `;
 
 export const Image = styled.img`

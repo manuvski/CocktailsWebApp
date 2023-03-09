@@ -15,7 +15,7 @@ import {
   SyncButton,
 } from "./styles";
 
-const Categories: FC = () => {
+const OrdinaryDrinks: FC = () => {
   const [categoryList, setCategoryList] = useState<Category[]>([]);
   const navigate = useNavigate();
    const [isloading, setIsLoading] = useState<boolean>(false);
@@ -81,4 +81,4 @@ const Categories: FC = () => {
   );
 };
 
-export default memo(Categories);
+export default memo(OrdinaryDrinks);
