@@ -34,14 +34,69 @@ export const RedirectMessage = styled.p`
 export const ButtonBoxes = styled.div`
   display: block;
   margin: 20px;
+  display: flex;
 `;
 
-export const WelcomeButton = styled(Link)`
-  padding: 10px 20px;
-  background-color: ${({ theme }) => theme.colors.GriffindorRedDark};
-  color: ${({ theme }) => theme.colors.white100};
-  border-radius: 5px;
+export const WelcomeButtonLogin = styled(Link)`
+display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/9735/9735723.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  margin-left: 10px;
   text-decoration: none;
-  margin: 0 10px;
-  font-family: Oswald;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  span {
+    position: absolute;
+    color: #000;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: oswald;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    
+  }
+`;
+
+export const WelcomeButtonSignup = styled(Link)`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/4829/4829066.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+  text-decoration: none;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  span {
+    position: absolute;
+    color: #000;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: oswald;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  }
 `;

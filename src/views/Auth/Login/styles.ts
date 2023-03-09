@@ -8,14 +8,15 @@ export const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.black};
-  background-image: url("https://i.blogs.es/603a33/layer-14/1366_2000.webp");
+  background-image: url("https://img.freepik.com/foto-gratis/camarero-haciendo-delicioso-coctel-refrescante_23-2149093595.jpg");
   background-size: cover;
 `;
 
 export const Form = styled(DefaultForm)`
   display: flex;
   flex-direction: column;
-  background-color: rgba(116, 0, 1, 0.5);
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   height: 25rem;
   width: 22.5rem;
