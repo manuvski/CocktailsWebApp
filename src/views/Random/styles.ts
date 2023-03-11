@@ -3,7 +3,7 @@ export const App = styled.div`
   text-align: center;
   background-color: #282c34;
   display: flex;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -11,12 +11,11 @@ export const App = styled.div`
   color: white;
 `;
 export const Container = styled.div`
-  padding: 5em;
+  padding: 2em;
   padding-top: 5px;
   padding-bottom: 25px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 24px;
+  max-width:400px;
+  max-height:600px;
 `;
 
 export const BackContainer = styled.div`
@@ -31,8 +30,8 @@ export const ButtonBack = styled.button`
 `;
 
 export const RandomButton = styled.button`
-  width: 70px;
-  height: 25px;
+  width: 250px;
+  height: 75px;
   border-radius: 5px;
   margin: 2px;
   cursor: pointer;

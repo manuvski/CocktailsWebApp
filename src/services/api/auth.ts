@@ -30,7 +30,7 @@ export const login = async (values: { email: string; password: string }) => {
   return error;
 };
 
-export const signup = async (values: { email: string; password: string }) => {
+export const signup = async (values: { name:string, email: string; password: string }) => {
   let error = "";
   try {
     const response = await fetch(`${BASE_API_URL}/signup`, {
@@ -38,7 +38,7 @@ export const signup = async (values: { email: string; password: string }) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email: values.email, password: values.password }),
+      body: JSON.stringify({name:values.name, email: values.email, password: values.password }),
     });
     if (response.ok) {
       const token = await response.json();

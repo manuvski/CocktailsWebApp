@@ -18,9 +18,9 @@ const useLogic = () => {
         setRandomCocktail(cocktail);
       }, []);
 
-      useEffect(() => {
-        handleGetCocktail();
-      }, [handleGetCocktail]);
+    //   useEffect(() => {
+    //     handleGetCocktail();
+    //   }, [handleGetCocktail]);
 
 
     return{

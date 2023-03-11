@@ -12,7 +12,6 @@ const Card: FC<Props> = ({ id, categoryName }) => {
 
   return (
     <Container>
-      <Description> ID: {id} </Description>
       <Description> {categoryName} </Description>
       <DetailsButton onClick={goToDetails}>Go to {categoryName}:</DetailsButton>
     </Container>

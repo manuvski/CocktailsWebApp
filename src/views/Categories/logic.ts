@@ -6,11 +6,8 @@ import { getCategories, syncCategories } from "../../services/api/categories";
 const useLogic = () => {
 
   const [categoryList, setCategoryList] = useState<Category[]>([]);
-   const [page, setPage] = useState(1);
    const [isloading, setIsLoading] = useState<boolean>(false);
    const { id: categoryId } = useParams();
-
-
    const navigate = useNavigate();
 
   const getCategoriesList = useCallback(async () => {
@@ -37,13 +34,6 @@ const useLogic = () => {
     navigate(`/categories/${categoryId}`, { replace: true });
   }, [navigate]);
 
-  const handleNextPage = () => {
-    setPage(page + 1);
-  };
-
-  const handlePrevPage = () => {
-    setPage(page - 1);
-  };
 
     return{
       isloading,

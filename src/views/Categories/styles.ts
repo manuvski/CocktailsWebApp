@@ -3,7 +3,7 @@ export const App = styled.div`
   text-align: center;
   background-color: #282c34;
   display: flex;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -19,6 +19,7 @@ export const Container = styled.div`
   gap: 24px;
 `;
 export const BackContainer = styled.div`
+display:flex;
 `
 
 export const SyncButton = styled.button`

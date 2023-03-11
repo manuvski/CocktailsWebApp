@@ -42,6 +42,15 @@ const SignupForm: FC = () => {
         initialValues={initialValues}
       >
         <Form>
+        <Field name="name">
+            {({ field, meta }: { field: any; meta: any }) => (
+              <InputContainer>
+                <Label>Name</Label>
+                <Input $hasError={!!meta?.error} type="text" {...field} />
+                {meta?.error && <Error>{meta.error}</Error>}
+              </InputContainer>
+            )}
+          </Field>
           <Field name="email">
             {({ field, meta }: { field: any; meta: any }) => (
               <InputContainer>

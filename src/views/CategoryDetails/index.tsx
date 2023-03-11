@@ -1,5 +1,5 @@
 import { FC, Fragment, memo, useCallback, useEffect, useState } from "react";
-import { App, Container } from "./styles";
+import { App, ButtonBack, CategoryContainer, Container } from "./styles";
 import useLogic from "./logic";
 import { BackContainer, SyncButton } from "../Categories/styles";
 import CategoryCard from "../../components/CategoryCard";
@@ -8,7 +8,8 @@ const CategoryDetails: FC = () => {
   const {
     isLoading,
     cocktails,
-    categoryName
+    categoryName,
+    goToBack
   } = useLogic()
   
 
@@ -18,10 +19,13 @@ const CategoryDetails: FC = () => {
 console.log(categoryName)
   return (
     <App>
-      <BackContainer></BackContainer>
-      
-      <Container>
+      <BackContainer>
+      <ButtonBack onClick={goToBack}>Go Back!</ButtonBack>
+      </BackContainer>
+      <CategoryContainer>
       <div>{categoryName}</div>
+      </CategoryContainer>
+      <Container>
         {cocktails.map((cocktail) => (
           <Fragment key={cocktail.id}>
             <CategoryCard

@@ -8,9 +8,12 @@ export const validationSchema = Yup.object().shape({
     .min(4, "Too Short!")
     .max(12, "Too Long!")
     .required("Required"),
+    name: Yup.string()
+    .min(3, "Too Short!")
 });
 
 export const initialValues = {
   email: "",
   password: "",
+  name: ""
 };

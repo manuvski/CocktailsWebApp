@@ -21,6 +21,10 @@ const useLogic = () => {
     }
   }, []);
 
+  const goToBack = useCallback(() => {
+    navigate("/categories", { replace: true });
+  }, [navigate]);
+
   useEffect(() => {
     handleGetOrdinaryDrink(categoryId);
   }, [handleGetOrdinaryDrink, categoryId]);
@@ -29,7 +33,8 @@ const useLogic = () => {
      isLoading,
      handleGetOrdinaryDrink,
      cocktails,
-     categoryName:location.state.name
+     categoryName:location.state.name,
+     goToBack
     }
 }
 
