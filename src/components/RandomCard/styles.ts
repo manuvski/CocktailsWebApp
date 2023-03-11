@@ -5,7 +5,7 @@ export const Container = styled.div`
 border:1px solid white;
 `;
 
-export const Image = styled.img`
+export const ImageContainer = styled.img`
   width: 150px;
   height: 200px;
   margin-top: 40px;
@@ -31,11 +31,8 @@ export const DescriptionApi = styled.p`
   color: ${({ theme }) => theme.colors.GriffindorRedDark};
 `;
 
-export const DetailsButton = styled.button`
+export const DetailsButton = styled(Link)`
   padding: 10px 20px;
-  margin:10px;
-  height: 35px;
-  width:150px;
   background-color: ${({ theme }) => theme.colors.DementorBlack};
   color: white;
   border-radius: 5px;
@@ -43,7 +40,6 @@ export const DetailsButton = styled.button`
   display: inline;
   padding: 5px 5px;
   font-family: Oswald;
-  cursor: pointer;
 `;
 
 export const EditButton = styled.button`
@@ -58,3 +54,4 @@ export const EditButton = styled.button`
   padding: 5px 5px;
   font-family: Oswald;
 `;
+

@@ -9,19 +9,14 @@ import {
   SyncButton,
 } from "./styles";
 
-const OrdinaryDrinks: FC = () => {
-  const {
-    isloading,
-    goToBack,
-    handleNextPage,
-    handlePrevPage,
-    syncData,
-    categoryList,
-  } = useLogic();
+const Categories: FC = () => {
+  const { isloading, goToBack, syncData, categoryList, goToDetails } =
+    useLogic();
 
   if (isloading) {
     return <h1>LOADING</h1>;
   }
+
   return (
     <App>
       <BackContainer>
@@ -31,7 +26,11 @@ const OrdinaryDrinks: FC = () => {
       <Container>
         {categoryList.map((category, index) => (
           <div key={index}>
-            <Card id={category.id} category={category.category} />
+            <Card
+              id={category.id}
+              categoryName={category.category}
+              onClick={goToDetails}
+            />
           </div>
         ))}
       </Container>
@@ -39,4 +38,4 @@ const OrdinaryDrinks: FC = () => {
   );
 };
 
-export default memo(OrdinaryDrinks);
+export default memo(Categories);

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Category } from "../../models/categories";
 import { getCategories, syncCategories } from "../../services/api/categories";
 
@@ -8,6 +8,8 @@ const useLogic = () => {
   const [categoryList, setCategoryList] = useState<Category[]>([]);
    const [page, setPage] = useState(1);
    const [isloading, setIsLoading] = useState<boolean>(false);
+   const { id: categoryId } = useParams();
+
 
    const navigate = useNavigate();
 
@@ -23,20 +25,16 @@ const useLogic = () => {
     getCategoriesList();
   }, []);
 
-  // const handleRemoveCharacter = useCallback(async (id: string) => {
-  //   setIsLoading(true);
-  //   await removeCharacter(id);
-  //   setCharacterList((prev) => prev.filter((item) => item.id !== id));
-  //   setIsLoading(false);
-  // }, []);
-
   useEffect(() => {
     getCategoriesList();
   }, [getCategoriesList]);
 
-
   const goToBack = useCallback(() => {
     navigate("/landing", { replace: true });
+  }, [navigate]);
+
+  const goToDetails = useCallback(() => {
+    navigate(`/categories/${categoryId}`, { replace: true });
   }, [navigate]);
 
   const handleNextPage = () => {
@@ -50,10 +48,9 @@ const useLogic = () => {
     return{
       isloading,
       goToBack,
-      handleNextPage,
-      handlePrevPage,
       syncData,
-      categoryList
+      categoryList,
+       goToDetails
     }
 }
 

@@ -32,13 +32,14 @@ export const ButtonBoxes = styled.div`
 `;
 
 export const WelcomeButton = styled(Link)`
-  padding: 10px 20px;
   background-color: ${({ theme }) => theme.colors.GriffindorRedDark};
-  color: ${({ theme }) => theme.colors.white100};
   border-radius: 5px;
+  color: ${({ theme }) => theme.colors.white100};
   font-family: Oswald;
-  text-decoration: none;
+  height:20px;
   margin: 0 10px;
+  padding: 120px 80px;
+  text-decoration: none;
   /* Efecto de iluminación */
   &:hover {
     box-shadow: 0 0 10px 10px #f2a65a;

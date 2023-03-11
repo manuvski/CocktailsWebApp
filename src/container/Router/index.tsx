@@ -9,6 +9,8 @@ import { useLocation, Navigate } from "react-router-dom";
 import Profile from "../../views/Profile";
 import Landing from "../../views/LandingPage";
 import Categories from "../../views/Categories";
+import OrdinaryDrinks from "../../views/CategoryDetails";
+import Random from "../../views/Random";
 
 const Router: FC = () => {
   const ProtectedRoutes = ({ children }: { children: JSX.Element }) => {
@@ -82,6 +84,28 @@ const Router: FC = () => {
               <>
                 <Navbar />
                 <Categories />
+              </>
+            </ProtectedRoutes>
+          }
+        ></Route>
+         <Route
+          path="/categories/:id"
+          element={
+            <ProtectedRoutes>
+              <>
+                <Navbar />
+                <OrdinaryDrinks />
+              </>
+            </ProtectedRoutes>
+          }
+        ></Route>
+         <Route
+          path="/random"
+          element={
+            <ProtectedRoutes>
+              <>
+                <Navbar />
+                <Random />
               </>
             </ProtectedRoutes>
           }
