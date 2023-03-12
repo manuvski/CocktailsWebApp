@@ -36,6 +36,7 @@ export const WelcomeButton = styled(Link)`
   border-radius: 5px;
   color: ${({ theme }) => theme.colors.white100};
   font-family: Oswald;
+  font-size:20px;
   height:20px;
   margin: 0 10px;
   padding: 120px 80px;

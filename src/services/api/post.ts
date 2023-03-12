@@ -1,4 +1,4 @@
-import { normalizePost } from "../../models/post";
+import { normalizePost, Post } from "../../models/post";
 import { getToken } from "../storage";
 
 export type PostResponse = {
@@ -35,3 +35,30 @@ export const createPost = async (values: { title:string,  image: string, comment
       console.log((error as Error).message);
     }
   };
+
+
+  export const updatePost = async (
+    postId: string,
+    data: Partial<Post>
+  ) => {
+    try {
+      console.log({ data });
+      const token = getToken();
+      const response = await fetch(`${BASE_API_URL}/${postId}`, {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+  
+        const post: PostResponse = await response.json();
+        console.log({ post });
+        return normalizePost(post);
+      } catch (error) {
+        console.log((error as Error).message);
+      }
+    };
+
+    
