@@ -11,6 +11,8 @@ import Landing from "../../views/LandingPage";
 import Categories from "../../views/Categories";
 import OrdinaryDrinks from "../../views/CategoryDetails";
 import Random from "../../views/Random";
+import CreationForm from "../../views/Creation";
+
 
 const Router: FC = () => {
   const ProtectedRoutes = ({ children }: { children: JSX.Element }) => {
@@ -106,6 +108,17 @@ const Router: FC = () => {
               <>
                 <Navbar />
                 <Random />
+              </>
+            </ProtectedRoutes>
+          }
+        ></Route>
+          <Route
+          path="/creation"
+          element={
+            <ProtectedRoutes>
+              <>
+                <Navbar />
+                <CreationForm />
               </>
             </ProtectedRoutes>
           }

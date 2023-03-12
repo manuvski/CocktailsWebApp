@@ -13,7 +13,7 @@ const Landing: FC = () => {
       <ButtonBoxes>
         <WelcomeButton to="/categories">Categories</WelcomeButton>
         <WelcomeButton to="/random">Get Random Cocktail!</WelcomeButton>
-        <WelcomeButton to="/staff">Staff</WelcomeButton>
+        <WelcomeButton to="/creation">Post your cocktail</WelcomeButton>
         <WelcomeButton to="/spells">Spells</WelcomeButton>
       </ButtonBoxes>
     </WelcomeContainer>

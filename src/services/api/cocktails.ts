@@ -31,12 +31,14 @@ export type RandomResponse = {
   };
 };
 
+const BASE_API_URL="http://localhost:8000/cocktails"
+
 export const getCategoryDrinksById = async (
   id: string
 ): Promise<Cocktail[]> => {
   try {
     const token = getToken();
-    const response = await fetch(`http://localhost:8000/cocktails/${id}`, {
+    const response = await fetch(`${BASE_API_URL}/${id}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -52,7 +54,7 @@ export const getCategoryDrinksById = async (
 export const getRandomCocktail = async () => {
   try {
     const token = getToken();
-    const response = await fetch("http://localhost:8000/cocktails" ,{
+    const response = await fetch(`${BASE_API_URL}`,{
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -64,3 +66,4 @@ export const getRandomCocktail = async () => {
   }
   return [];
 };
+
