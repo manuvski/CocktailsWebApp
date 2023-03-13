@@ -13,6 +13,7 @@ import OrdinaryDrinks from "../../views/CategoryDetails";
 import Random from "../../views/Random";
 import CreationForm from "../../views/Creation";
 import EditForm from "../../views/Edit";
+import Posts from "../../views/PostView";
 
 
 
@@ -126,12 +127,12 @@ const Router: FC = () => {
           }
         ></Route>
          <Route
-          path="/update"
+          path="/post"
           element={
             <ProtectedRoutes>
               <>
                 <Navbar />
-                <EditForm />
+                <Posts />
               </>
             </ProtectedRoutes>
           }
