@@ -63,7 +63,7 @@ export const updatePost = async (postId: string, data: Partial<Post>) => {
   }
 };
 
-export const getPostById = async (postId: string): Promise<Post[]> => {
+export const getPostById = async (postId: string): Promise<Post | any> => {
   try {
     const token = getToken();
     const response = await fetch(`${BASE_API_URL}/${postId}`, {

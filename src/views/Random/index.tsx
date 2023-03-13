@@ -2,6 +2,7 @@ import { FC, memo } from "react";
 import RandomCard from "../../components/RandomCard";
 import useLogic from "./logic";
 import {
+  AnimatedButton,
   App,
   BackContainer,
   ButtonBack,
@@ -19,10 +20,12 @@ const Random: FC = () => {
   return (
     <App>
       {/* <ButtonBack onClick={goToBack}>Go Back!</ButtonBack> */}
-      <RandomButton onClick={() => handleGetCocktail()}>
-          ⇨ Click here and get a random drink ⇦
-        </RandomButton>
-      <BackContainer></BackContainer>
+      <BackContainer>
+      <ButtonBack onClick={goToBack}>Go Back</ButtonBack>
+      </BackContainer>
+      <AnimatedButton onClick={() => handleGetCocktail()}>
+      👉 Click 'HERE' and get a random drink 👈
+        </AnimatedButton>
       <Container>
         {randomCocktail.map((cocktail, index) => (
           <div key={index}>

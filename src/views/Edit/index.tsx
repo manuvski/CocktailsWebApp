@@ -57,7 +57,7 @@ const EditForm: FC = () => {
       setIsLoading(false);
     }
   }, []);
-  
+
   useEffect(() => {
     handleGetPost(postId);
   }, [handleGetPost, postId]);
@@ -69,7 +69,7 @@ const EditForm: FC = () => {
   return (
     <App>
       <AppEdit>
-        <Image src={character?.image} />
+        <Image src={post?.image} />
         <Container>
           {!isEditing && (
             <EditButton onClick={handleActiveEdition}>

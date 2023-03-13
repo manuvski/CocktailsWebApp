@@ -9,6 +9,8 @@ export const App = styled.div`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  justify-content: flex-start;
+  background-image: url("https://i.pinimg.com/736x/8d/87/05/8d870514b7ed689d6164e734f691955c.jpg");
 `;
 export const Container = styled.div`
   padding: 5em;
@@ -19,16 +21,18 @@ export const Container = styled.div`
   gap: 24px;
 `;
 export const BackContainer = styled.div`
-display:flex;
-`
+  display: flex;
+`;
 
 export const SyncButton = styled.button`
   width: 90px;
-  height: 40px;
+  height: 50px;
   border-radius: 5px;
   margin: 10px;
+  font-family: oswald;
+  color: white;
   cursor: pointer;
-  background: linear-gradient(315deg, #9d523c 0%, #f2a65a 74%);
+  background: linear-gradient(315deg, #000000 0%, #282c34 74%);
 `;
 
 export const DeleteButton = styled.button`
@@ -63,10 +67,14 @@ export const ButtonContainer = styled.div`
 `;
 
 export const ButtonBack = styled.button`
+  position: absolute;
+  top: 90px;
+  left: 10px;
   width: 90px;
   height: 40px;
   border-radius: 5px;
   margin: 10px;
+  font-family: oswald;
   cursor: pointer;
-  background: linear-gradient(315deg, #9d523c 0%, #f2a65a 74%);
+  background: linear-gradient(315deg, #ffffff 0%, #ffffff 74%);
 `;

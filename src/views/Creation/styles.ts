@@ -11,19 +11,25 @@ export const App = styled.div`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  /* background-image: url("https://st2.depositphotos.com/2853475/7544/i/950/depositphotos_75445475-stock-photo-close-up-on-a-cocktail.jpg"); */
 `;
 
 export const BackContainer = styled.div`
-display:flex;
-`
+  display: flex;
+`;
 
 export const ButtonBack = styled.button`
+  position: absolute;
+  top: 90px;
+  left: 10px;
   width: 90px;
   height: 40px;
   border-radius: 5px;
   margin: 10px;
+  font-family: oswald;
+  color: white;
   cursor: pointer;
-  background: linear-gradient(315deg, #9d523c 0%, #f2a65a 74%);
+  background: linear-gradient(315deg, #000000 0%, #000000 74%);
 `;
 
 export const FormContainer = styled.div`
@@ -33,7 +39,7 @@ export const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.black};
-  background-image: url("https://i.blogs.es/603a33/layer-14/1366_2000.webp");
+  background-image: url("https://img.freepik.com/foto-gratis/mojito-ingredientes_144627-29934.jpg");
   background-size: cover;
 `;
 
@@ -41,9 +47,9 @@ export const Form = styled(DefaultForm)`
   display: flex;
   flex-direction: column;
   /* background-color: ${({ theme }) => theme.colors.GriffindorRedDark}; */
-  background-color: rgba(116, 0, 1, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  height: 25rem;
+  height: 32rem;
   width: 22.5rem;
   margin-top: 6.25rem;
   margin-left: 2rem;
