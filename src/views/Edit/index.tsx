@@ -14,14 +14,13 @@ import { Field, Form, Formik } from "formik";
 import { validationSchema } from "./constants";
 import { useNavigate, useParams } from "react-router-dom";
 import { Post } from "../../models/post";
-import { updatePost } from "../../services/api/post";
+import { getPostById, updatePost } from "../../services/api/post";
 
 const EditForm: FC = () => {
   const { id: postId } = useParams();
   const [post, setPost] = useState<Post | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isEditing, setIsEditing] = useState<boolean>(false);
-  const navigate = useNavigate();
 
   const handleActiveEdition = useCallback(async () => {
     setIsEditing(true);
@@ -50,18 +49,18 @@ const EditForm: FC = () => {
     [post]
   );
 
-  const handleGetCharacter = useCallback(async (id?: string) => {
+  const handleGetPost = useCallback(async (id?: string) => {
     if (id) {
       setIsLoading(true);
-      const post = await getCharacterById(id);
-      setCharacter(character);
+      const post = await getPostById(id);
+      setPost(post);
       setIsLoading(false);
     }
   }, []);
   
   useEffect(() => {
-    handleGetCharacter(characterId);
-  }, [handleGetCharacter, characterId]);
+    handleGetPost(postId);
+  }, [handleGetPost, postId]);
 
   if (isLoading) {
     return <p>LOADING</p>;

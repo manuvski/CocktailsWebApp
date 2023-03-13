@@ -3,7 +3,7 @@ import { PostResponse } from "../services/api/post";
 export type PostInput = {
   title: string;
   image: string;
-  comment: Date;
+  comment: string;
 };
 
 export const normalizePost = (input: PostResponse) => {
