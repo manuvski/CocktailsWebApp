@@ -12,9 +12,9 @@ const Landing: FC = () => {
       <WelcomeMessage>Select the desired info</WelcomeMessage>
       <ButtonBoxes>
         <WelcomeButton to="/categories">Categories</WelcomeButton>
-        <WelcomeButton to="/students">All Students</WelcomeButton>
-        <WelcomeButton to="/staff">Staff</WelcomeButton>
-        <WelcomeButton to="/spells">Spells</WelcomeButton>
+        <WelcomeButton to="/random">Get Random Cocktail!</WelcomeButton>
+        <WelcomeButton to="/creation">Post your cocktail</WelcomeButton>
+        <WelcomeButton to="/spells">Update all Post</WelcomeButton>
       </ButtonBoxes>
     </WelcomeContainer>
   );

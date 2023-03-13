@@ -13,10 +13,8 @@ export type CocktailInput = {
 export const normalizeCocktail = (input: CocktailResponse) => {
   return {
     id: input?.id || "",
-    cocktail_id: input?.cocktail_id || "",
-    cocktail_name: input?.cocktail_name || "",
+    name: input?.cocktail_name || "",
     image: input?.image || "",
-    sub_cocktail_category_FK: input?.sub_cocktail_category_FK || "",
     createdAt: input?.createdAt || Date(),
     updatedAt: input?.updatedAt || Date(),
   };
