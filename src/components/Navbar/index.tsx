@@ -3,7 +3,7 @@ import { Props } from "./types";
 import { useNavigate } from "react-router-dom";
 import {
   ContainerButton,
-  Logoimg,
+  Logo,
   ProfileButton,
   SignoutButton,
   Tittle,
@@ -26,7 +26,7 @@ const Navbar: FC<Props> = ({ type = "list" }) => {
     <>
       <CustomNavbar>
         <Tittle to="/landing">
-          <Logoimg></Logoimg>
+          <Logo></Logo>
         </Tittle>
         <ContainerButton>
           <ProfileButton onClick={handleProfile}>Profile</ProfileButton>
@@ -38,3 +38,7 @@ const Navbar: FC<Props> = ({ type = "list" }) => {
 };
 
 export default Navbar;
+
+
+
+

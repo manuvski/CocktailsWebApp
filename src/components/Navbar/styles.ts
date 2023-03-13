@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const CustomNavbar = styled.nav`
-  background-color: ${({ theme }) => theme.colors.GriffindorRedDark};
+ 
   display: flex;
   justify-content: space-between;
   height: 90px;
   width: 100%;
+  background-image: linear-gradient(to right, #800000, #000000 );
 `;
 
 export const ContainerButton = styled.div`
@@ -58,7 +59,7 @@ export const Tittle = styled(Link)`
   }
 `;
 
-export const Logoimg = styled.div`
+export const Logo = styled.div`
   background-image: url("https://i.ibb.co/v1Rbx3Z/Logo-title-navbar-ok.png");
   background-repeat: no-repeat;
   background-size: cover;
