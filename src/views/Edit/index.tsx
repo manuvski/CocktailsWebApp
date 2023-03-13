@@ -12,7 +12,7 @@ import {
 } from "./styles";
 import { Field, Form, Formik } from "formik";
 import { validationSchema } from "./constants";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Post } from "../../models/post";
 import { getPostById, updatePost } from "../../services/api/post";
 
@@ -77,16 +77,16 @@ const EditForm: FC = () => {
             </EditButton>
           )}
           <Formik
-            type="edit"
+            // type="edit"
             validationSchema={validationSchema}
             onSubmit={onEditCharacter}
             initialValues={initialValues}
           >
             <Form>
-              <Field name="name">
+              <Field name="title">
                 {({ field, meta }: { field: any; meta: any }) => (
                   <InputContainer>
-                    <Label>Name</Label>
+                    <Label>Title</Label>
                     <Input
                       disabled={!isEditing}
                       $hasError={!!meta?.error}
@@ -97,10 +97,10 @@ const EditForm: FC = () => {
                   </InputContainer>
                 )}
               </Field>
-              <Field name="species">
+              <Field name="image">
                 {({ field, meta }: { field: any; meta: any }) => (
                   <InputContainer>
-                    <Label>Species</Label>
+                    <Label>Image</Label>
                     <Input
                       disabled={!isEditing}
                       $hasError={!!meta?.error}
@@ -111,66 +111,10 @@ const EditForm: FC = () => {
                   </InputContainer>
                 )}
               </Field>
-              <Field name="house">
+              <Field name="comment">
                 {({ field, meta }: { field: any; meta: any }) => (
                   <InputContainer>
-                    <Label>House</Label>
-                    <Input
-                      disabled={!isEditing}
-                      $hasError={!!meta?.error}
-                      type="text"
-                      {...field}
-                    />
-                    {meta?.error && <Error>{meta.error}</Error>}
-                  </InputContainer>
-                )}
-              </Field>
-              <Field name="wizard">
-                {({ field, meta }: { field: any; meta: any }) => (
-                  <InputContainer>
-                    <Label>Wizard</Label>
-                    <Input
-                      disabled={!isEditing}
-                      $hasError={!!meta?.error}
-                      type="text"
-                      {...field}
-                    />
-                    {meta?.error && <Error>{meta.error}</Error>}
-                  </InputContainer>
-                )}
-              </Field>
-              <Field name="ancestry">
-                {({ field, meta }: { field: any; meta: any }) => (
-                  <InputContainer>
-                    <Label>Ancestry</Label>
-                    <Input
-                      disabled={!isEditing}
-                      $hasError={!!meta?.error}
-                      type="text"
-                      {...field}
-                    />
-                    {meta?.error && <Error>{meta.error}</Error>}
-                  </InputContainer>
-                )}
-              </Field>
-              <Field name="patronus">
-                {({ field, meta }: { field: any; meta: any }) => (
-                  <InputContainer>
-                    <Label>Patronus</Label>
-                    <Input
-                      disabled={!isEditing}
-                      $hasError={!!meta?.error}
-                      type="text"
-                      {...field}
-                    />
-                    {meta?.error && <Error>{meta.error}</Error>}
-                  </InputContainer>
-                )}
-              </Field>
-              <Field name="actor">
-                {({ field, meta }: { field: any; meta: any }) => (
-                  <InputContainer>
-                    <Label>Actor</Label>
+                    <Label>Description</Label>
                     <Input
                       disabled={!isEditing}
                       $hasError={!!meta?.error}

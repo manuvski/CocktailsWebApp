@@ -78,3 +78,22 @@ export const getPostById = async (postId: string): Promise<Post | any> => {
   }
   return [];
 };
+
+export const getAllPosts = async (): Promise<Post | any> => {
+  try {
+    const token = getToken();
+    const response = await fetch(`${BASE_API_URL}`, {
+      method: "GET",
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    const data: PostResponse[] = await response.json();
+    console.log({ data });
+    return data.map(normalizePost);
+  } catch (error) {
+    console.log((error as Error).message);
+  }
+  return [];
+};
+
+
+
