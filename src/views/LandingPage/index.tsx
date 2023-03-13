@@ -14,7 +14,7 @@ const Landing: FC = () => {
         <WelcomeButton to="/categories">Categories</WelcomeButton>
         <WelcomeButton to="/random">Get Random Cocktail!</WelcomeButton>
         <WelcomeButton to="/creation">Post your cocktail</WelcomeButton>
-        <WelcomeButton to="/update">Update all Post</WelcomeButton>
+        <WelcomeButton to="/post">All Post</WelcomeButton>
       </ButtonBoxes>
     </WelcomeContainer>
   );

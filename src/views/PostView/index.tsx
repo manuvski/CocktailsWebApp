@@ -27,9 +27,9 @@ const {
       {postList.map((post, index) => (
         <div key={index}>
           <PostCard
-            id={category.id}
-            categoryName={category.category}
-            onClick={goToDetails}
+            title={post.title}
+            image={post.image}
+            comment={post.comment}
           />
         </div>
       ))}
