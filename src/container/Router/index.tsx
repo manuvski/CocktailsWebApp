@@ -13,6 +13,7 @@ import OrdinaryDrinks from "../../views/CategoryDetails";
 import Random from "../../views/Random";
 import CreationForm from "../../views/Creation";
 import EditForm from "../../views/Edit";
+import Posts from "../../views/PostView";
 
 
 
@@ -126,12 +127,20 @@ const Router: FC = () => {
           }
         ></Route>
          <Route
+<<<<<<< HEAD
           path="/update"
+=======
+          path="/post"
+>>>>>>> 7fd82a3304ded1d7dceff172847bd0877155e1e2
           element={
             <ProtectedRoutes>
               <>
                 <Navbar />
+<<<<<<< HEAD
                 <EditForm />
+=======
+                <Posts />
+>>>>>>> 7fd82a3304ded1d7dceff172847bd0877155e1e2
               </>
             </ProtectedRoutes>
           }
