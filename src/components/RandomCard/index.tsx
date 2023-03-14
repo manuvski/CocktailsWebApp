@@ -8,8 +8,6 @@ const RandomCard: FC<Props> = ({
   category,
   isAlcoholic,
   description,
-  // instrucctions,
-  // ingredients,
 }) => {
   return (
     <Container>
@@ -18,8 +16,6 @@ const RandomCard: FC<Props> = ({
       <Description> Category drink → {category} </Description>
       <Description> {isAlcoholic} </Description>
       <Description> {description} </Description>
-      {/* <Description> {instrucctions} </Description>
-      <Description> {ingredients} </Description> */}
     </Container>
   );
 };

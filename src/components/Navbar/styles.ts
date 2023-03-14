@@ -27,20 +27,6 @@ export const SignoutButton = styled.button`
     transform: translateY(-3px);
   }
 `;
-/* font-family: Oswald;
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  background: linear-gradient(315deg, #9d523c 0%, #f2a65a 74%);
-`; */
 
 export const ProfileButton = styled.button`
   font-family: Oswald;
@@ -64,20 +50,6 @@ export const ProfileButton = styled.button`
   }
 `;
 
-/* font-family: Oswald;
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  background: linear-gradient(315deg, #9d523c 0%, #f2a65a 74%);*/
-
 export const Tittle = styled(Link)`
   padding-bottom: 16px;
   margin: 16px;
@@ -89,16 +61,6 @@ export const Tittle = styled(Link)`
     color: ${({ theme }) => theme.colors.LightGreen};
   }
 `;
-/* padding-bottom: 16px;
-  margin: 16px;
-  color: ${({ theme }) => theme.colors.DementorBlack};
-  font-family: ${({ theme }) => theme.font.MyFont};
-  text-decoration: none;
-  font-size: 30px;
-  &:hover {
-    color: ${({ theme }) => theme.colors.GriffindorRedDark};
-  }
-`; */
 
 export const Logoimg = styled.div`
   background-image: url("https://i.ibb.co/6ywQBhV/Logo-COK.png");

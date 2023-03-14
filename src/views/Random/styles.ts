@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-export const App = styled.div`
+export const GeneralContainer = styled.div`
   text-align: center;
   background-color: #282c34;
   display: flex;

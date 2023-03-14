@@ -1,7 +1,6 @@
-import { FC, memo, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { FC, memo } from "react";
 import {
-  App,
+  GeneralContainer,
   BackContainer,
   ButtonBack,
   Container,
@@ -10,19 +9,16 @@ import PostCard from "../../components/PostCard";
 import useLogic from "./logic";
 
 const Post: FC = () => {
-  const navigate = useNavigate();
 const {
-  isloading,
   goToBack,
   postList, 
 } = useLogic()
 
   return (
-    <App>
+    <GeneralContainer>
     <BackContainer>
       <ButtonBack onClick={goToBack}>Go Back!</ButtonBack>
     </BackContainer>
-    {/* <SyncButton onClick={syncData}>Sync Categories</SyncButton> */}
     <Container>
       {postList.map((post, index) => (
         <div key={index}>
@@ -34,7 +30,7 @@ const {
         </div>
       ))}
     </Container>
-  </App>
+  </GeneralContainer>
   );
 };
 

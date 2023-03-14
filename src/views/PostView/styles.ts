@@ -1,5 +1,5 @@
 import styled from "styled-components";
-export const App = styled.div`
+export const GeneralContainer = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ export const App = styled.div`
 
 export const Container = styled.div`
   padding: 5em;
-  padding-top: 5px;
+  padding-top: 70px;
   padding-bottom: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

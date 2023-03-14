@@ -1,6 +1,6 @@
 import { FC, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { Container, Description, DetailsButton, EditButton } from "./styles";
+import { Container, Description, DetailsButton } from "./styles";
 import { Props } from "./types";
 
 const Card: FC<Props> = ({ id, categoryName }) => {
@@ -8,7 +8,7 @@ const Card: FC<Props> = ({ id, categoryName }) => {
 
   const goToDetails = useCallback(() => {
     navigate(`/categories/${id}`, { replace: true, state:{name:categoryName} });
-  }, [navigate]);
+  }, [categoryName, id, navigate]);
 
   return (
     <Container>

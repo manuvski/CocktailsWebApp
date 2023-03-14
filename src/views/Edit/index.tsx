@@ -1,6 +1,6 @@
 import { FC, memo, useCallback, useEffect, useMemo, useState } from "react";
 import {
-  App,
+  GeneralContainer,
   Container,
   Image,
   Error,
@@ -8,7 +8,7 @@ import {
   InputContainer,
   Label,
   Input,
-  AppEdit,
+  ContainerEdit,
 } from "./styles";
 import { Field, Form, Formik } from "formik";
 import { validationSchema } from "./constants";
@@ -67,8 +67,8 @@ const EditForm: FC = () => {
   }
 
   return (
-    <App>
-      <AppEdit>
+    <GeneralContainer>
+      <ContainerEdit>
         <Image src={post?.image} />
         <Container>
           {!isEditing && (
@@ -129,8 +129,8 @@ const EditForm: FC = () => {
             </Form>
           </Formik>
         </Container>
-      </AppEdit>
-    </App>
+      </ContainerEdit>
+    </GeneralContainer>
   );
 };
 

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { Form as DefaultForm } from "formik";
 
-export const App = styled.div`
+export const GeneralContainer = styled.div`
   text-align: center;
   background-color: #282c34;
   display: flex;

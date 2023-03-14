@@ -3,7 +3,7 @@ import RandomCard from "../../components/RandomCard";
 import useLogic from "./logic";
 import {
   AnimatedButton,
-  App,
+  GeneralContainer,
   BackContainer,
   ButtonBack,
   Container,
@@ -17,7 +17,7 @@ const Random: FC = () => {
   }
 
   return (
-    <App>
+    <GeneralContainer>
       {/* <ButtonBack onClick={goToBack}>Go Back!</ButtonBack> */}
       <BackContainer>
       <ButtonBack onClick={goToBack}>Go Back</ButtonBack>
@@ -40,7 +40,7 @@ const Random: FC = () => {
           </div>
         ))}
       </Container>
-    </App>
+    </GeneralContainer>
   );
 };
 

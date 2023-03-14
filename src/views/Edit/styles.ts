@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const App = styled.div`
+export const GeneralContainer = styled.div`
   text-align: center;
   background-color: #282c34;
   display: flex;
@@ -13,7 +13,7 @@ export const App = styled.div`
   flex-direction: row;
 `;
 
-export const AppEdit = styled.div`
+export const ContainerEdit = styled.div`
   background: linear-gradient(315deg, #9d523c 0%, #f2a65a 74%);
   flex: 0 0 300px;
   padding: 5px;

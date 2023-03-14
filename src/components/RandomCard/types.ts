@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export type Props = {
   onClick?: (id: string) => void;
   image: string;
@@ -7,6 +5,4 @@ export type Props = {
   category:string,
   isAlcoholic:string,
   description:string
-  // instrucctions:string,
-  // ingredients: string;
 };

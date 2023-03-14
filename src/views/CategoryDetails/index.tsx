@@ -1,7 +1,7 @@
-import { FC, Fragment, memo, useCallback, useEffect, useState } from "react";
-import { App, ButtonBack, CategoryContainer, Container } from "./styles";
+import { FC, Fragment, memo } from "react";
+import { GeneralContainer, ButtonBack, CategoryContainer, Container } from "./styles";
 import useLogic from "./logic";
-import { BackContainer, SyncButton } from "../Categories/styles";
+import { BackContainer } from "../Categories/styles";
 import CategoryCard from "../../components/CategoryCard";
 
 const CategoryDetails: FC = () => {
@@ -18,7 +18,7 @@ const CategoryDetails: FC = () => {
   }
 console.log(categoryName)
   return (
-    <App>
+    <GeneralContainer>
       <BackContainer>
       <ButtonBack onClick={goToBack}>Go Back!</ButtonBack>
       </BackContainer>
@@ -36,7 +36,7 @@ console.log(categoryName)
           </Fragment>
         ))}
       </Container>
-    </App>
+    </GeneralContainer>
   );
 };
 

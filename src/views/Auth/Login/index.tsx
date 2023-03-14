@@ -18,6 +18,7 @@ import { login } from "../../../services/api/auth";
 
 const LoginForm: FC = () => {
   const navigate = useNavigate();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [error, setError] = useState<string | null>(null);
 
   const handleLogin = async (values: typeof initialValues) => {
@@ -30,6 +31,7 @@ const LoginForm: FC = () => {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const goToBack = useCallback(() => {
     navigate("/landing");
   }, [navigate]);

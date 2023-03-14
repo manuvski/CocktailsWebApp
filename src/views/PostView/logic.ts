@@ -1,13 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { Category } from "../../models/categories";
+import { useNavigate } from "react-router-dom";
 import { Post } from "../../models/post";
-import { getCategories, syncCategories } from "../../services/api/categories";
 import { getAllPosts } from "../../services/api/post";
 
 const useLogic = () => {
   const [postList, setpostList] = useState<Post[]>([]);
-  const [isloading, setIsLoading] = useState<boolean>(false);
+  const [isloading] = useState<boolean>(false);
   const [isFavorited, setIsFavorited] = useState(false);
 
   //Función para cambiar corazón de no favorito a favorito

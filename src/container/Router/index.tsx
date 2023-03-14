@@ -12,7 +12,6 @@ import Categories from "../../views/Categories";
 import OrdinaryDrinks from "../../views/CategoryDetails";
 import Random from "../../views/Random";
 import CreationForm from "../../views/Creation";
-import EditForm from "../../views/Edit";
 import Posts from "../../views/PostView";
 
 

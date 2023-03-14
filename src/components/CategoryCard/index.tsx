@@ -2,7 +2,6 @@ import { FC } from "react";
 import {
   Container,
   Description,
-  DetailsButton,
   ImageContainer,
 } from "./styles";
 import { Props } from "./types";

@@ -2,10 +2,10 @@ import { FC, memo } from "react";
 import Card from "../../components/Card";
 import useLogic from "./logic";
 import {
-  App,
   BackContainer,
   ButtonBack,
   Container,
+  GeneralContainer,
   SyncButton,
 } from "./styles";
 
@@ -18,7 +18,7 @@ const Categories: FC = () => {
   }
 
   return (
-    <App>
+    <GeneralContainer>
       <BackContainer>
         <ButtonBack onClick={goToBack}>Go Back!</ButtonBack>
       </BackContainer>
@@ -34,7 +34,7 @@ const Categories: FC = () => {
           </div>
         ))}
       </Container>
-    </App>
+    </GeneralContainer>
   );
 };
 

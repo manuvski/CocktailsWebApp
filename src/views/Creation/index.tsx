@@ -8,7 +8,7 @@ import {
   Label,
   Error,
   InputContainer,
-  App,
+  GeneralContainer,
   BackContainer,
   ButtonBack,
 } from "./styles";
@@ -32,7 +32,7 @@ const CreationForm: FC = () => {
   }, [navigate]);
 
   return (
-    <App>
+    <GeneralContainer>
       <BackContainer>
         <ButtonBack onClick={goToBack}>Go Back!</ButtonBack>
       </BackContainer>
@@ -75,7 +75,7 @@ const CreationForm: FC = () => {
           </Form>
         </Formik>
       </FormContainer>
-    </App>
+    </GeneralContainer>
   );
 };
 

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Author, Container, ContentWrapper, Description, DetailsButton, HeartButton, ImageContainer, Title } from "./styles";
+import { Container, ContentWrapper, Description, DetailsButton, HeartButton, ImageContainer, Title } from "./styles";
 import { Props } from "./types";
 import useLogic from "../../views/PostView/logic";
 
@@ -23,12 +23,5 @@ const PostCard: FC<Props> = ({ title, image, comment }) => {
   </Container>
 );
 };
-//     <Container>
-//       <ImageContainer src={image} />
-//       <Description> {title} </Description>
-//       <Description> {comment} </Description>
-//     </Container>
-//   );
-// };
 
 export default PostCard;
