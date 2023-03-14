@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+export const CustomNavbar = styled.nav`
+ 
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  width: 100%;
+  background-image: linear-gradient(to right, #800000, #000000 );
+`;
+
 export const ContainerButton = styled.div`
   display: flex;
   align-items: center;
@@ -62,35 +71,10 @@ export const Tittle = styled(Link)`
   }
 `;
 
-export const Logoimg = styled.div`
-  background-image: url("https://i.ibb.co/6ywQBhV/Logo-COK.png");
+export const Logo = styled.div`
+  background-image: url("https://i.ibb.co/v1Rbx3Z/Logo-title-navbar-ok.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 70px;
   height: 70px;
-`;
-
-export const CustomNavbar = styled.nav`
-  background-color: ${({ theme }) => theme.colors.DemetorBlack100};
-  display: flex;
-  justify-content: space-between;
-  height: 90px;
-  width: 100%;
-
-  //responsive
-  @media (max-width: 768px) {
-    /* Estilos para pantallas más pequeñas que 768px */
-    /* Ajustar tamaño de botones */
-    ${ProfileButton}, ${SignoutButton} {
-      width: 80px;
-      height: 25px;
-      font-size: 12px;
-      padding: 10px;
-      margin: 5px;
-    }
-    /* Ajustar tamaño de título */
-    ${Tittle} {
-      font-size: 20px;
-    }
-  }
 `;
