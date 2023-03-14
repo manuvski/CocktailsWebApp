@@ -7,7 +7,6 @@ import {
   BackContainer,
   ButtonBack,
   Container,
-  RandomButton,
 } from "./styles";
 
 const Random: FC = () => {

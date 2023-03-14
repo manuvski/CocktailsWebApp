@@ -6,23 +6,29 @@ import { getCategories, syncCategories } from "../../services/api/categories";
 import { getAllPosts } from "../../services/api/post";
 
 const useLogic = () => {
-
   const [postList, setpostList] = useState<Post[]>([]);
-   const [isloading, setIsLoading] = useState<boolean>(false);
-//    const { id: categoryId } = useParams();
-   const navigate = useNavigate();
+  const [isloading, setIsLoading] = useState<boolean>(false);
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  
+  const toggleFavorite = () => {
+    setIsFavorited(!isFavorited);
+  };
+
+  //    const { id: categoryId } = useParams();
+  const navigate = useNavigate();
 
   const getPostList = useCallback(async () => {
     const post = await getAllPosts();
-    console.log('post', post)
+    console.log("post", post);
     setpostList(post);
   }, []);
 
-//   const syncData = useCallback(async () => {
-//     await syncCategories();
-//     setIsLoading(false);
-//     getCategoriesList();
-//   }, []);
+  //   const syncData = useCallback(async () => {
+  //     await syncCategories();
+  //     setIsLoading(false);
+  //     getCategoriesList();
+  //   }, []);
 
   useEffect(() => {
     getPostList();
@@ -32,15 +38,18 @@ const useLogic = () => {
     navigate("/landing", { replace: true });
   }, [navigate]);
 
-//   const goToDetails = useCallback(() => {
-//     navigate(`/categories/${categoryId}`, { replace: true });
-//   }, [navigate]);
+  //   const goToDetails = useCallback(() => {
+  //     navigate(`/categories/${categoryId}`, { replace: true });
+  //   }, [navigate]);
 
+  return {
+    isloading,
+    goToBack,
+    postList,
+    isFavorited,
+    setIsFavorited,
+    toggleFavorite
+  };
+};
 
-    return{
-      isloading,
-      goToBack,
-      postList,    }
-}
-
-export default useLogic
+export default useLogic;

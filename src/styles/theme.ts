@@ -1,6 +1,3 @@
-import { createGlobalStyle } from "styled-components";
-//@ts-ignore
-
 const theme = {
   colors: {
     accent: "#0074CA",

@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
-border:1px solid white;
+  border: 1px solid white;
+  background-color: rgb(0, 0, 0, 0.9);
 `;
 
 export const ImageContainer = styled.img`
@@ -54,4 +55,3 @@ export const EditButton = styled.button`
   padding: 5px 5px;
   font-family: Oswald;
 `;
-
