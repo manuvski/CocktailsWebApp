@@ -10,7 +10,7 @@ const useLogic = () => {
   const [isloading, setIsLoading] = useState<boolean>(false);
   const [isFavorited, setIsFavorited] = useState(false);
 
-  
+  //Función para cambiar corazón de no favorito a favorito
   const toggleFavorite = () => {
     setIsFavorited(!isFavorited);
   };
