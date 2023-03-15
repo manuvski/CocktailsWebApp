@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { Form as DefaultForm } from "formik";
+import styled, { css } from 'styled-components';
+import { Form as DefaultForm } from 'formik';
 
 export const FormContainer = styled.div`
   width: 100vw;
@@ -8,7 +8,7 @@ export const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.black};
-  background-image: url("https://img.freepik.com/foto-gratis/camarero-haciendo-delicioso-coctel-refrescante_23-2149093595.jpg");
+  background-image: url('https://img.freepik.com/foto-gratis/camarero-haciendo-delicioso-coctel-refrescante_23-2149093595.jpg');
   background-size: cover;
 `;
 

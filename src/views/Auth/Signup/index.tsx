@@ -1,6 +1,6 @@
-import { FC, memo, useCallback } from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { FC, memo, useCallback } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Form,
   FormButton,
@@ -11,10 +11,10 @@ import {
   InputContainer,
   StyledLink,
   Return,
-} from "./styles";
-import { Formik, Field } from "formik";
-import { initialValues, validationSchema } from "./constants";
-import { signup } from "../../../services/api/auth";
+} from './styles';
+import { Formik, Field } from 'formik';
+import { initialValues, validationSchema } from './constants';
+import { signup } from '../../../services/api/auth';
 
 const SignupForm: FC = () => {
   const navigate = useNavigate();
@@ -24,14 +24,14 @@ const SignupForm: FC = () => {
     const signupError = await signup(values);
 
     if (!signupError) {
-      navigate("/landing");
+      navigate('/landing');
     } else {
       setError(signupError);
     }
   };
 
   const goToBack = useCallback(() => {
-    navigate("/landing");
+    navigate('/landing');
   }, [navigate]);
 
   return (
@@ -42,7 +42,7 @@ const SignupForm: FC = () => {
         initialValues={initialValues}
       >
         <Form>
-        <Field name="name">
+          <Field name="name">
             {({ field, meta }: { field: any; meta: any }) => (
               <InputContainer>
                 <Label>Name</Label>
@@ -70,9 +70,9 @@ const SignupForm: FC = () => {
             )}
           </Field>
           <FormButton type="submit">SignUp</FormButton>
-          <div style={{ marginTop: "10px" }}>
+          <div style={{ marginTop: '10px' }}>
             <Return>
-              Already have an account?{" "}
+              Already have an account?{' '}
               <StyledLink href="/login">Go to login 👈 </StyledLink>
             </Return>
           </div>

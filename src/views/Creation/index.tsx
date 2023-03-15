@@ -1,5 +1,5 @@
-import { FC, memo, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { FC, memo, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Form,
   FormButton,
@@ -11,10 +11,10 @@ import {
   App,
   BackContainer,
   ButtonBack,
-} from "./styles";
-import { Formik, Field } from "formik";
-import { initialValues, validationSchema } from "./constants";
-import { createPost } from "../../services/api/post";
+} from './styles';
+import { Formik, Field } from 'formik';
+import { initialValues, validationSchema } from './constants';
+import { createPost } from '../../services/api/post';
 
 const CreationForm: FC = () => {
   const navigate = useNavigate();
@@ -23,12 +23,12 @@ const CreationForm: FC = () => {
   const handleCreation = useCallback(async (values: typeof initialValues) => {
     const post = await createPost(values);
     if (post) {
-      navigate("/landing");
+      navigate('/landing');
     }
   }, []);
 
   const goToBack = useCallback(() => {
-    navigate("/landing");
+    navigate('/landing');
   }, [navigate]);
 
   return (
@@ -71,7 +71,7 @@ const CreationForm: FC = () => {
               )}
             </Field>
             <FormButton type="submit">Create</FormButton>
-            <div style={{ marginTop: "10px" }}></div>
+            <div style={{ marginTop: '10px' }}></div>
           </Form>
         </Formik>
       </FormContainer>

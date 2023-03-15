@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 export const App = styled.div`
   text-align: center;
   display: flex;
@@ -8,7 +8,7 @@ export const App = styled.div`
   font-size: calc(10px + 2vmin);
   color: white;
   justify-content: flex-start;
-  background-image: url("https://i.ibb.co/FxKbYzw/peakpx.jpg");
+  background-image: url('https://i.ibb.co/FxKbYzw/peakpx.jpg');
   background-size: contain;
   background-position: center;
 `;

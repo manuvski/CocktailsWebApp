@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const Container = styled.div`
-border:1px solid white;
+  border: 1px solid white;
 `;
 
 export const Image = styled.img`
@@ -33,9 +33,9 @@ export const DescriptionApi = styled.p`
 
 export const DetailsButton = styled.button`
   padding: 10px 20px;
-  margin:10px;
+  margin: 10px;
   height: 35px;
-  width:150px;
+  width: 150px;
   background-color: ${({ theme }) => theme.colors.DementorBlack};
   color: white;
   border-radius: 5px;

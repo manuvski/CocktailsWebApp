@@ -1,4 +1,4 @@
-import type { CategoryResponse } from "../services/api/categories";
+import type { CategoryResponse } from '../services/api/categories';
 
 export type CategoryInput = {
   id: string;
@@ -7,12 +7,10 @@ export type CategoryInput = {
   updatedAt: Date;
 };
 
-
 export const normalizeCategory = (input: CategoryResponse) => {
- 
   return {
-    id: input?.id || "",
-    category: input?.category || "",
+    id: input?.id || '',
+    category: input?.category || '',
     createdAt: input?.createdAt || Date(),
     updatedAt: input?.updatedAt || Date(),
   };

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const ContainerButton = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ export const SignoutButton = styled.button`
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-  background: linear-gradient(315deg, #E8A808 0%, #DD1103 74%);
+  background: linear-gradient(315deg, #e8a808 0%, #dd1103 74%);
   color: ${({ theme }) => theme.colors.White};
   border: none;
   transition: all 0.3s ease-in-out;
@@ -55,7 +55,7 @@ export const ProfileButton = styled.button`
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-  background: linear-gradient(315deg, #E8A808 0%, #DD1103 74%);
+  background: linear-gradient(315deg, #e8a808 0%, #dd1103 74%);
   color: ${({ theme }) => theme.colors.White};
   border: none;
   transition: all 0.3s ease-in-out;
@@ -101,7 +101,7 @@ export const Tittle = styled(Link)`
 `; */
 
 export const Logoimg = styled.div`
-  background-image: url("https://i.ibb.co/6ywQBhV/Logo-COK.png");
+  background-image: url('https://i.ibb.co/6ywQBhV/Logo-COK.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 70px;
@@ -109,7 +109,7 @@ export const Logoimg = styled.div`
 `;
 
 export const CustomNavbar = styled.nav`
-  background-color: ${({ theme }) => theme.colors.DemetorBlack100};
+  background-image: linear-gradient(to right, #800000, #000000);
   display: flex;
   justify-content: space-between;
   height: 90px;

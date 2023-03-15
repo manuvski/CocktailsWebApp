@@ -1,6 +1,6 @@
-import { getToken } from "../storage";
-import { Cocktail, normalizeCocktail } from "../../models/cocktails";
-import { normalizeRandom } from "../../models/random";
+import { getToken } from '../storage';
+import { Cocktail, normalizeCocktail } from '../../models/cocktails';
+import { normalizeRandom } from '../../models/random';
 
 export type CocktailResponse = {
   id: string;
@@ -31,7 +31,7 @@ export type RandomResponse = {
   };
 };
 
-const BASE_API_URL="http://localhost:8000/cocktails"
+const BASE_API_URL = 'http://localhost:8000/cocktails';
 
 export const getCategoryDrinksById = async (
   id: string
@@ -39,7 +39,7 @@ export const getCategoryDrinksById = async (
   try {
     const token = getToken();
     const response = await fetch(`${BASE_API_URL}/${id}`, {
-      method: "GET",
+      method: 'GET',
       headers: { Authorization: `Bearer ${token}` },
     });
     const data: CocktailResponse[] = await response.json();
@@ -54,7 +54,7 @@ export const getCategoryDrinksById = async (
 export const getRandomCocktail = async () => {
   try {
     const token = getToken();
-    const response = await fetch(`${BASE_API_URL}`,{
+    const response = await fetch(`${BASE_API_URL}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -66,4 +66,3 @@ export const getRandomCocktail = async () => {
   }
   return [];
 };
-

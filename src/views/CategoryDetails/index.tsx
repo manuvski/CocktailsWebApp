@@ -1,29 +1,23 @@
-import { FC, Fragment, memo, useCallback, useEffect, useState } from "react";
-import { App, ButtonBack, CategoryContainer, Container } from "./styles";
-import useLogic from "./logic";
-import { BackContainer, SyncButton } from "../Categories/styles";
-import CategoryCard from "../../components/CategoryCard";
+import { FC, Fragment, memo, useCallback, useEffect, useState } from 'react';
+import { App, ButtonBack, CategoryContainer, Container } from './styles';
+import useLogic from './logic';
+import { BackContainer, SyncButton } from '../Categories/styles';
+import CategoryCard from '../../components/CategoryCard';
 
 const CategoryDetails: FC = () => {
-  const {
-    isLoading,
-    cocktails,
-    categoryName,
-    goToBack
-  } = useLogic()
-  
+  const { isLoading, cocktails, categoryName, goToBack } = useLogic();
 
   if (isLoading) {
     return <p>LOADING</p>;
   }
-console.log(categoryName)
+  console.log(categoryName);
   return (
     <App>
       <BackContainer>
-      <ButtonBack onClick={goToBack}>Go Back!</ButtonBack>
+        <ButtonBack onClick={goToBack}>Go Back!</ButtonBack>
       </BackContainer>
       <CategoryContainer>
-      <div>{categoryName}</div>
+        <div>{categoryName}</div>
       </CategoryContainer>
       <Container>
         {cocktails.map((cocktail) => (

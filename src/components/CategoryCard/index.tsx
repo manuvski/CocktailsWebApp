@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { FC } from 'react';
 import {
   Container,
   Description,
   DetailsButton,
   ImageContainer,
-} from "./styles";
-import { Props } from "./types";
+} from './styles';
+import { Props } from './types';
 
 const CategoryCard: FC<Props> = ({ id, name, image }) => {
   return (

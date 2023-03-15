@@ -1,10 +1,10 @@
-import { FC } from "react";
+import { FC } from 'react';
 import {
   ButtonBoxes,
   WelcomeButton,
   WelcomeContainer,
   WelcomeMessage,
-} from "./styles";
+} from './styles';
 
 const Landing: FC = () => {
   return (

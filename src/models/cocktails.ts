@@ -1,4 +1,4 @@
-import { CocktailResponse } from "../services/api/cocktails";
+import { CocktailResponse } from '../services/api/cocktails';
 
 export type CocktailInput = {
   id: string;
@@ -12,9 +12,9 @@ export type CocktailInput = {
 
 export const normalizeCocktail = (input: CocktailResponse) => {
   return {
-    id: input?.id || "",
-    name: input?.cocktail_name || "",
-    image: input?.image || "",
+    id: input?.id || '',
+    name: input?.cocktail_name || '',
+    image: input?.image || '',
     createdAt: input?.createdAt || Date(),
     updatedAt: input?.updatedAt || Date(),
   };

@@ -1,14 +1,14 @@
-import { setToken } from "../storage";
+import { setToken } from '../storage';
 
-const BASE_API_URL = "http://localhost:8000/auth";
+const BASE_API_URL = 'http://localhost:8000/auth';
 
 export const login = async (values: { email: string; password: string }) => {
-  let error = "";
+  let error = '';
   try {
     const response = await fetch(`${BASE_API_URL}/login`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
 
       body: JSON.stringify({ email: values.email, password: values.password }),
@@ -30,15 +30,23 @@ export const login = async (values: { email: string; password: string }) => {
   return error;
 };
 
-export const signup = async (values: { name:string, email: string; password: string }) => {
-  let error = "";
+export const signup = async (values: {
+  name: string;
+  email: string;
+  password: string;
+}) => {
+  let error = '';
   try {
     const response = await fetch(`${BASE_API_URL}/signup`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify({name:values.name, email: values.email, password: values.password }),
+      body: JSON.stringify({
+        name: values.name,
+        email: values.email,
+        password: values.password,
+      }),
     });
     if (response.ok) {
       const token = await response.json();

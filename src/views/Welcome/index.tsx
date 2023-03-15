@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react';
 import {
   ButtonBoxes,
   RedirectMessage,
@@ -7,7 +7,7 @@ import {
   WelcomeContainer,
   WelcomeMessage,
   WelcomeVideo,
-} from "./styles";
+} from './styles';
 
 const Welcome: FC = () => {
   return (
@@ -35,8 +35,12 @@ const Welcome: FC = () => {
         />
       </RedirectMessage>
       <ButtonBoxes>
-        <WelcomeButtonLogin to="/login"><span>LOGIN</span></WelcomeButtonLogin>
-        <WelcomeButtonSignup to="/signup"><span>SIGNUP</span></WelcomeButtonSignup>
+        <WelcomeButtonLogin to="/login">
+          <span>LOGIN</span>
+        </WelcomeButtonLogin>
+        <WelcomeButtonSignup to="/signup">
+          <span>SIGNUP</span>
+        </WelcomeButtonSignup>
       </ButtonBoxes>
     </WelcomeContainer>
   );

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const App = styled.div`
   text-align: center;
@@ -26,8 +26,8 @@ export const AppEdit = styled.div`
   display: flex;
   flex-direction: row;
   &:before {
-    content: "Harry Potter character";
-    font-family: "Oswald";
+    content: 'Harry Potter character';
+    font-family: 'Oswald';
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
@@ -55,7 +55,6 @@ export const CategoryContainer = styled.div`
   padding: 5em;
   padding-top: 5px;
   padding-bottom: 25px;
-  
 `;
 export const Container = styled.div`
   padding: 5em;
@@ -65,7 +64,6 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 24px;
 `;
-
 
 export const Image = styled.img`
   width: 175px;

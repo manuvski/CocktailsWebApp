@@ -1,21 +1,19 @@
-import { FC } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Welcome from "../../views/Welcome";
-import LoginForm from "../../views/Auth/Login";
-import SignupForm from "../../views/Auth/Signup";
-import Navbar from "../../components/Navbar";
-import { getToken } from "../../services/storage";
-import { useLocation, Navigate } from "react-router-dom";
-import Profile from "../../views/Profile";
-import Landing from "../../views/LandingPage";
-import Categories from "../../views/Categories";
-import OrdinaryDrinks from "../../views/CategoryDetails";
-import Random from "../../views/Random";
-import CreationForm from "../../views/Creation";
-import EditForm from "../../views/Edit";
-import Posts from "../../views/PostView";
-
-
+import { FC } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Welcome from '../../views/Welcome';
+import LoginForm from '../../views/Auth/Login';
+import SignupForm from '../../views/Auth/Signup';
+import Navbar from '../../components/Navbar';
+import { getToken } from '../../services/storage';
+import { useLocation, Navigate } from 'react-router-dom';
+import Profile from '../../views/Profile';
+import Landing from '../../views/LandingPage';
+import Categories from '../../views/Categories';
+import OrdinaryDrinks from '../../views/CategoryDetails';
+import Random from '../../views/Random';
+import CreationForm from '../../views/Creation';
+import EditForm from '../../views/Edit';
+import Posts from '../../views/PostView';
 
 const Router: FC = () => {
   const ProtectedRoutes = ({ children }: { children: JSX.Element }) => {
@@ -34,9 +32,9 @@ const Router: FC = () => {
 
     if (token) {
       if (
-        location.pathname === "/signup" ||
-        location.pathname === "/login" ||
-        location.pathname === "/"
+        location.pathname === '/signup' ||
+        location.pathname === '/login' ||
+        location.pathname === '/'
       ) {
         return <Navigate to="/landing" replace state={{ from: location }} />;
       }
@@ -82,7 +80,7 @@ const Router: FC = () => {
             </ProtectedRoutes>
           }
         ></Route>
-         <Route
+        <Route
           path="/categories"
           element={
             <ProtectedRoutes>
@@ -93,7 +91,7 @@ const Router: FC = () => {
             </ProtectedRoutes>
           }
         ></Route>
-         <Route
+        <Route
           path="/categories/:id"
           element={
             <ProtectedRoutes>
@@ -104,7 +102,7 @@ const Router: FC = () => {
             </ProtectedRoutes>
           }
         ></Route>
-         <Route
+        <Route
           path="/random"
           element={
             <ProtectedRoutes>
@@ -115,7 +113,7 @@ const Router: FC = () => {
             </ProtectedRoutes>
           }
         ></Route>
-          <Route
+        <Route
           path="/creation"
           element={
             <ProtectedRoutes>
@@ -126,7 +124,7 @@ const Router: FC = () => {
             </ProtectedRoutes>
           }
         ></Route>
-         <Route
+        <Route
           path="/post"
           element={
             <ProtectedRoutes>

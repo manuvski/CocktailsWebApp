@@ -1,6 +1,6 @@
-import { FC, memo, useCallback } from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { FC, memo, useCallback } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Form,
   FormButton,
@@ -11,10 +11,10 @@ import {
   InputContainer,
   Return,
   StyledLink,
-} from "./styles";
-import { Formik, Field } from "formik";
-import { initialValues, validationSchema } from "./constants";
-import { login } from "../../../services/api/auth";
+} from './styles';
+import { Formik, Field } from 'formik';
+import { initialValues, validationSchema } from './constants';
+import { login } from '../../../services/api/auth';
 
 const LoginForm: FC = () => {
   const navigate = useNavigate();
@@ -24,14 +24,14 @@ const LoginForm: FC = () => {
     const loginError = await login(values);
 
     if (!loginError) {
-      navigate("/landing");
+      navigate('/landing');
     } else {
       setError(loginError);
     }
   };
 
   const goToBack = useCallback(() => {
-    navigate("/landing");
+    navigate('/landing');
   }, [navigate]);
 
   return (

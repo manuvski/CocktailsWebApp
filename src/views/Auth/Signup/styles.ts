@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { Form as DefaultForm } from "formik";
+import styled, { css } from 'styled-components';
+import { Form as DefaultForm } from 'formik';
 
 export const FormContainer = styled.div`
   width: 100vw;
@@ -8,7 +8,7 @@ export const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.black};
-  background-image: url("https://image.cnbcfm.com/api/v1/image/106814780-1608603027565-FESTIVE_CAMPFIRE.jpg?v=1608602872&w=1340&h=500&ffmt=webp&vtcrop=y");
+  background-image: url('https://image.cnbcfm.com/api/v1/image/106814780-1608603027565-FESTIVE_CAMPFIRE.jpg?v=1608602872&w=1340&h=500&ffmt=webp&vtcrop=y');
   background-size: cover;
 `;
 

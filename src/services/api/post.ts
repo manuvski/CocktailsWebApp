@@ -1,5 +1,5 @@
-import { normalizePost, Post } from "../../models/post";
-import { getToken } from "../storage";
+import { normalizePost, Post } from '../../models/post';
+import { getToken } from '../storage';
 
 export type PostResponse = {
   id: string;
@@ -12,7 +12,7 @@ export type PostResponse = {
   createdAt: Date;
 };
 
-const BASE_API_URL = "http://localhost:8000/feeds";
+const BASE_API_URL = 'http://localhost:8000/feeds';
 
 export const createPost = async (values: {
   title: string;
@@ -22,10 +22,10 @@ export const createPost = async (values: {
   try {
     const token = getToken();
     const response = await fetch(`${BASE_API_URL}`, {
-      method: "POST",
+      method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         title: values.title,
@@ -47,10 +47,10 @@ export const updatePost = async (postId: string, data: Partial<Post>) => {
     console.log({ data });
     const token = getToken();
     const response = await fetch(`${BASE_API_URL}/${postId}`, {
-      method: "PUT",
+      method: 'PUT',
       headers: {
         Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
     });
@@ -67,7 +67,7 @@ export const getPostById = async (postId: string): Promise<Post | any> => {
   try {
     const token = getToken();
     const response = await fetch(`${BASE_API_URL}/${postId}`, {
-      method: "GET",
+      method: 'GET',
       headers: { Authorization: `Bearer ${token}` },
     });
     const data: PostResponse[] = await response.json();
@@ -83,7 +83,7 @@ export const getAllPosts = async (): Promise<Post | any> => {
   try {
     const token = getToken();
     const response = await fetch(`${BASE_API_URL}`, {
-      method: "GET",
+      method: 'GET',
       headers: { Authorization: `Bearer ${token}` },
     });
     const data: PostResponse[] = await response.json();
@@ -94,6 +94,3 @@ export const getAllPosts = async (): Promise<Post | any> => {
   }
   return [];
 };
-
-
-

@@ -1,13 +1,13 @@
-import { FC, memo } from "react";
-import Card from "../../components/Card";
-import useLogic from "./logic";
+import { FC, memo } from 'react';
+import Card from '../../components/Card';
+import useLogic from './logic';
 import {
   App,
   BackContainer,
   ButtonBack,
   Container,
   SyncButton,
-} from "./styles";
+} from './styles';
 
 const Categories: FC = () => {
   const { isloading, goToBack, syncData, categoryList, goToDetails } =

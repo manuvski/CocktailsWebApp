@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { Category } from "../../models/categories";
-import { Post } from "../../models/post";
-import { getCategories, syncCategories } from "../../services/api/categories";
-import { getAllPosts } from "../../services/api/post";
+import { useCallback, useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { Category } from '../../models/categories';
+import { Post } from '../../models/post';
+import { getCategories, syncCategories } from '../../services/api/categories';
+import { getAllPosts } from '../../services/api/post';
 
 const useLogic = () => {
   const [postList, setpostList] = useState<Post[]>([]);
@@ -20,7 +20,7 @@ const useLogic = () => {
 
   const getPostList = useCallback(async () => {
     const post = await getAllPosts();
-    console.log("post", post);
+    console.log('post', post);
     setpostList(post);
   }, []);
 
@@ -35,7 +35,7 @@ const useLogic = () => {
   }, [getPostList]);
 
   const goToBack = useCallback(() => {
-    navigate("/landing", { replace: true });
+    navigate('/landing', { replace: true });
   }, [navigate]);
 
   //   const goToDetails = useCallback(() => {
@@ -48,7 +48,7 @@ const useLogic = () => {
     postList,
     isFavorited,
     setIsFavorited,
-    toggleFavorite
+    toggleFavorite,
   };
 };
 

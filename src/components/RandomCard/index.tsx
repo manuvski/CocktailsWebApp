@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { Container, Description, ImageContainer } from "./styles";
-import { Props } from "./types";
+import { FC } from 'react';
+import { Container, Description, ImageContainer } from './styles';
+import { Props } from './types';
 
 const RandomCard: FC<Props> = ({
   image,

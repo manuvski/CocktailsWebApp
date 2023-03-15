@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const App = styled.div`
   text-align: center;
@@ -26,8 +26,8 @@ export const AppEdit = styled.div`
   display: flex;
   flex-direction: row;
   &:before {
-    content: "Harry Potter character";
-    font-family: "Oswald";
+    content: 'Harry Potter character';
+    font-family: 'Oswald';
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;

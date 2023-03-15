@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   width: 320px;
@@ -67,10 +67,10 @@ export const HeartButton = styled.button`
   cursor: pointer;
 
   &.active {
-    filter: invert(43%) sepia(90%) saturate(566%) hue-rotate(348deg) brightness(100%) contrast(114%);
+    filter: invert(43%) sepia(90%) saturate(566%) hue-rotate(348deg)
+      brightness(100%) contrast(114%);
   }
 `;
-
 
 // import styled, { keyframes } from "styled-components";
 

@@ -1,4 +1,4 @@
-import { PostResponse } from "../services/api/post";
+import { PostResponse } from '../services/api/post';
 
 export type PostInput = {
   title: string;
@@ -8,9 +8,9 @@ export type PostInput = {
 
 export const normalizePost = (input: PostResponse) => {
   return {
-    title: input?.title || "",
-    image: input?.image || "",
-    comment: input?.comment || "",
+    title: input?.title || '',
+    image: input?.image || '',
+    comment: input?.comment || '',
   };
 };
 

@@ -1,13 +1,13 @@
-import { FC, memo } from "react";
-import RandomCard from "../../components/RandomCard";
-import useLogic from "./logic";
+import { FC, memo } from 'react';
+import RandomCard from '../../components/RandomCard';
+import useLogic from './logic';
 import {
   AnimatedButton,
   App,
   BackContainer,
   ButtonBack,
   Container,
-} from "./styles";
+} from './styles';
 
 const Random: FC = () => {
   const { randomCocktail, isloading, handleGetCocktail, goToBack } = useLogic();
@@ -20,11 +20,11 @@ const Random: FC = () => {
     <App>
       {/* <ButtonBack onClick={goToBack}>Go Back!</ButtonBack> */}
       <BackContainer>
-      <ButtonBack onClick={goToBack}>Go Back</ButtonBack>
+        <ButtonBack onClick={goToBack}>Go Back</ButtonBack>
       </BackContainer>
       <AnimatedButton onClick={() => handleGetCocktail()}>
-      👉 Click 'HERE' and get a random drink 👈
-        </AnimatedButton>
+        👉 Click 'HERE' and get a random drink 👈
+      </AnimatedButton>
       <Container>
         {randomCocktail.map((cocktail, index) => (
           <div key={index}>

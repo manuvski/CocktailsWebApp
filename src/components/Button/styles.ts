@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const CustomButton = styled.button<{ $isDisabled?: boolean }>`
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   background-color: ${({ theme }) => theme.colors.grey100};
   color: ${({ theme }) => theme.colors.blue900};
   border: none;

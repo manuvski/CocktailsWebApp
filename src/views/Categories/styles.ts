@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 export const App = styled.div`
   text-align: center;
   background-color: #282c34;
@@ -10,7 +10,7 @@ export const App = styled.div`
   font-size: calc(10px + 2vmin);
   color: white;
   justify-content: flex-start;
-  background-image: url("https://i.pinimg.com/736x/8d/87/05/8d870514b7ed689d6164e734f691955c.jpg");
+  background-image: url('https://i.pinimg.com/736x/8d/87/05/8d870514b7ed689d6164e734f691955c.jpg');
 `;
 export const Container = styled.div`
   padding: 5em;

@@ -1,7 +1,5 @@
-import { getToken } from "../storage";
-import {
-  normalizeCategory,
-} from "../../models/categories";
+import { getToken } from '../storage';
+import { normalizeCategory } from '../../models/categories';
 
 export type CategoryResponse = {
   id: string;
@@ -10,12 +8,12 @@ export type CategoryResponse = {
   updatedAt: Date;
 };
 
-const BASE_API_URL = "http://localhost:8000/categories";
+const BASE_API_URL = 'http://localhost:8000/categories';
 
 export const getCategories = async () => {
   try {
     const token = getToken();
-    const response = await fetch("http://localhost:8000/categories/type", {
+    const response = await fetch('http://localhost:8000/categories/type', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -32,9 +30,9 @@ export const syncCategories = async () => {
   try {
     const token = getToken();
     await fetch(`${BASE_API_URL}/sync`, {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
     });

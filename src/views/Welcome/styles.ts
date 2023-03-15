@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const WelcomeContainer = styled.div`
   display: flex;
@@ -43,7 +43,7 @@ export const WelcomeButtonLogin = styled(Link)`
   align-items: center;
   width: 100px;
   height: 100px;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/9735/9735723.png");
+  background-image: url('https://cdn-icons-png.flaticon.com/512/9735/9735723.png');
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -76,7 +76,7 @@ export const WelcomeButtonSignup = styled(Link)`
   align-items: center;
   width: 100px;
   height: 100px;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/9735/9735723.png");
+  background-image: url('https://cdn-icons-png.flaticon.com/512/9735/9735723.png');
   background-size: cover;
   background-position: center;
   border-radius: 50%;

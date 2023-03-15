@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { Form as DefaultForm } from "formik";
+import styled, { css } from 'styled-components';
+import { Form as DefaultForm } from 'formik';
 
 export const App = styled.div`
   text-align: center;
@@ -39,7 +39,7 @@ export const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.black};
-  background-image: url("https://img.freepik.com/foto-gratis/mojito-ingredientes_144627-29934.jpg");
+  background-image: url('https://img.freepik.com/foto-gratis/mojito-ingredientes_144627-29934.jpg');
   background-size: cover;
 `;
 
