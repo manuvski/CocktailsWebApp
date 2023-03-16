@@ -1,3 +1,4 @@
 export type Props = {
-  type?: "list" | "details";
+  type?: 'list' | 'details';
+  isProfilePage?: boolean;
 };

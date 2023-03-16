@@ -71,3 +71,11 @@ export const HeartButton = styled.button`
     filter: invert(43%) sepia(50%) saturate(566%) hue-rotate(348deg) brightness(100%) contrast(114%);
   }
 `;
+
+export const TrashButton = styled.button`
+  background-image: url('https://i.ibb.co/pf8sPDS/icons8-papelera-llena-50.png');
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+`;

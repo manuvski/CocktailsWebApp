@@ -1,17 +1,15 @@
-import { FC, memo } from "react";
-import Card from "../../components/Card";
-import useLogic from "./logic";
+import { FC, memo } from 'react';
+import Card from '../../components/Card';
+import useLogic from './logic';
 import {
   BackContainer,
   ButtonBack,
   Container,
   GeneralContainer,
-  SyncButton,
-} from "./styles";
+} from './styles';
 
 const Categories: FC = () => {
-  const { isloading, goToBack, syncData, categoryList, goToDetails } =
-    useLogic();
+  const { isloading, goToBack, categoryList, goToDetails } = useLogic();
 
   if (isloading) {
     return <h1>LOADING</h1>;

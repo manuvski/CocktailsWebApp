@@ -26,12 +26,13 @@ const PostCard: FC<Props> = ({
   }, [isFav]);
   return (
     <Container>
+
       <ImageContainer src={image} />
-      <HeartButton
-          className={isFav ? 'active' : ''}
-          onClick={handleToggleFav}
-        />
       <ContentWrapper>
+      <HeartButton
+        className={isFav ? 'active' : ''}
+        onClick={handleToggleFav}
+      />
         <Title>{title}</Title>
         <Description>{comment}</Description>
 

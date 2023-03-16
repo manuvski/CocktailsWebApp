@@ -17,9 +17,7 @@ export const GeneralContainer = styled.div`
 `;
 export const Container = styled.div`
   background: linear-gradient(315deg, #878787 0%, #d3d3d3 74%);
-  flex: 0 0 300px;
   padding: 5px;
-  padding-bottom: 25px;
   margin: 2em;
   border-radius: 20px;
   box-shadow: 0 0 0 5px #fb1c11;

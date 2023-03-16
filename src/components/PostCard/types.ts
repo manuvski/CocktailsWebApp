@@ -5,4 +5,5 @@ export type Props = {
   comment: string;
   id: string;
   toggleFav: (id: string) => void;
+  onClick?: (id: string) => void;
 };

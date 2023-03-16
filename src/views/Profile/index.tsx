@@ -42,6 +42,7 @@ const ProfileView: FC = () => {
         <ButtonBack onClick={goToBack}>Go Back!</ButtonBack>
       </ButtonContainer>
       <Container>
+        <Info>Name: {userinfo?.name}</Info>
         <Info>ID: {userinfo?.id}</Info>
         <Info>EMAIL: {userinfo?.email}</Info>
       </Container>

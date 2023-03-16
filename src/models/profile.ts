@@ -5,8 +5,9 @@ export type ProfileInput = {
 
 export const normalizeProfile = (input: any) => {
   return {
-    id: (input?.id || "") as string,
-    email: (input?.email || "") as string,
+    name: (input?.name || '') as string,
+    id: (input?.id || '') as string,
+    email: (input?.email || '') as string,
   };
 };
 
