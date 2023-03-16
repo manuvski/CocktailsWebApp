@@ -1,13 +1,26 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const ContainerButton = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const SignoutButton = styled.button`
+export const SignoutButton = styled.span`
+  color: white;
   font-family: Oswald;
+  margin: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.White};
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    text-decoration: underline;
+    transform: translateY(-5px);
+  }
+`;
+/* font-family: Oswald;
   width: 100px;
   height: 30px;
   border-radius: 5px;
@@ -25,11 +38,23 @@ export const SignoutButton = styled.button`
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: translateY(-3px);
-  }
-`;
+  } */
 
-export const ProfileButton = styled.button`
+export const ProfileButton = styled.span`
+  color: white;
   font-family: Oswald;
+  margin: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.White};
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    text-decoration: underline;
+    transform: translateY(-5px);
+  }
+`;
+/* font-family: Oswald;
   width: 100px;
   height: 30px;
   border-radius: 5px;
@@ -48,7 +73,7 @@ export const ProfileButton = styled.button`
   &:hover {
     transform: translateY(-3px);
   }
-`;
+`; */
 
 export const Tittle = styled(Link)`
   padding-bottom: 16px;
@@ -63,7 +88,7 @@ export const Tittle = styled(Link)`
 `;
 
 export const Logoimg = styled.div`
-  background-image: url("https://i.ibb.co/6ywQBhV/Logo-COK.png");
+  background-image: url('https://i.ibb.co/6ywQBhV/Logo-COK.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 70px;

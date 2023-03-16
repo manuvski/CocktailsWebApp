@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const App = styled.div`
   text-align: center;
@@ -23,8 +23,8 @@ export const Container = styled.div`
   position: relative;
   transition: all 0.3s ease-in-out;
   &:before {
-    content: "User Profile";
-    font-family: "Oswald";
+    content: 'User Profile';
+    font-family: 'Oswald';
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;

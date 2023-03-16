@@ -1,23 +1,23 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 export const GeneralContainer = styled.div`
   text-align: center;
+  padding-top: 60px;
   background-color: #282c34;
   display: flex;
   height: 100vh;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  justify-content: flex-start;
-  background-image: url("https://i.pinimg.com/736x/8d/87/05/8d870514b7ed689d6164e734f691955c.jpg");
+  background-image: url('https://i.pinimg.com/736x/8d/87/05/8d870514b7ed689d6164e734f691955c.jpg');
 `;
 export const Container = styled.div`
+  width: 70%;
   padding: 5em;
   padding-top: 5px;
   padding-bottom: 25px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr; // Ajusta el tamaño de las columnas del grid
   gap: 24px;
 `;
 export const BackContainer = styled.div`

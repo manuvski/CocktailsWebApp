@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
 export const GeneralContainer = styled.div`
   text-align: center;
   display: flex;
@@ -8,7 +9,7 @@ export const GeneralContainer = styled.div`
   font-size: calc(10px + 2vmin);
   color: white;
   justify-content: flex-start;
-  background-image: url("https://i.ibb.co/FxKbYzw/peakpx.jpg");
+  background-image: url('https://i.ibb.co/FxKbYzw/peakpx.jpg');
   background-size: contain;
   background-position: center;
 `;
@@ -78,4 +79,12 @@ export const ButtonBack = styled.button`
   font-family: oswald;
   cursor: pointer;
   background: linear-gradient(315deg, #ffffff 0%, #ffffff 74%);
+`;
+
+export const TrashButton = styled.button`
+  background-image: url('https://i.ibb.co/pf8sPDS/icons8-papelera-llena-50.png');
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 `;

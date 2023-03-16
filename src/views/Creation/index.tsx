@@ -1,5 +1,5 @@
-import { FC, memo, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { FC, memo, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Form,
   FormButton,
@@ -11,24 +11,24 @@ import {
   GeneralContainer,
   BackContainer,
   ButtonBack,
-} from "./styles";
-import { Formik, Field } from "formik";
-import { initialValues, validationSchema } from "./constants";
-import { createPost } from "../../services/api/post";
+  TittleContainer,
+} from './styles';
+import { Formik, Field } from 'formik';
+import { initialValues, validationSchema } from './constants';
+import { createPost } from '../../services/api/post';
 
 const CreationForm: FC = () => {
   const navigate = useNavigate();
-  // const [error, setError] = useState<string | null>(null);
 
   const handleCreation = useCallback(async (values: typeof initialValues) => {
     const post = await createPost(values);
     if (post) {
-      navigate("/landing");
+      navigate('/landing');
     }
-  }, []);
+  }, [navigate]);
 
   const goToBack = useCallback(() => {
-    navigate("/landing");
+    navigate('/landing');
   }, [navigate]);
 
   return (
@@ -37,11 +37,11 @@ const CreationForm: FC = () => {
         <ButtonBack onClick={goToBack}>Go Back!</ButtonBack>
       </BackContainer>
       <FormContainer>
+        <TittleContainer>Create your cocktail</TittleContainer>
         <Formik
           validationSchema={validationSchema}
           onSubmit={handleCreation}
-          initialValues={initialValues}
-        >
+          initialValues={initialValues}>
           <Form>
             <Field name="title">
               {({ field, meta }: { field: any; meta: any }) => (
@@ -64,14 +64,14 @@ const CreationForm: FC = () => {
             <Field name="comment">
               {({ field, meta }: { field: any; meta: any }) => (
                 <InputContainer>
-                  <Label>Let a comment </Label>
+                  <Label>Ingredients & Method </Label>
                   <Input $hasError={!!meta?.error} {...field} type="text" />
                   {meta?.error && <Error>{meta.error}</Error>}
                 </InputContainer>
               )}
             </Field>
             <FormButton type="submit">Create</FormButton>
-            <div style={{ marginTop: "10px" }}></div>
+            <div style={{ marginTop: '10px' }}></div>
           </Form>
         </Formik>
       </FormContainer>

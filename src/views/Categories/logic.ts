@@ -18,7 +18,7 @@ const useLogic = () => {
   const syncData = useCallback(async () => {
     await syncCategories();
     setIsLoading(false);
-    getCategoriesList();
+    // getCategoriesList();
   }, []);
 
   useEffect(() => {
@@ -31,8 +31,8 @@ const useLogic = () => {
 
   const goToDetails = useCallback(() => {
     navigate(`/categories/${categoryId}`, { replace: true });
-  }, [navigate]);
-
+  }, [categoryId, navigate]);
+  
   return {
     isloading,
     goToBack,

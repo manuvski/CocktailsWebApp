@@ -62,11 +62,12 @@ export const HeartButton = styled.button`
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+  border-radius: 20px;
   width: 30px;
   height: 30px;
   cursor: pointer;
 
   &.active {
-    filter: invert(43%) sepia(90%) saturate(566%) hue-rotate(348deg) brightness(100%) contrast(114%);
+    filter: invert(43%) sepia(50%) saturate(566%) hue-rotate(348deg) brightness(100%) contrast(114%);
   }
 `;

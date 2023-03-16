@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { Form as DefaultForm } from "formik";
+import styled, { css } from 'styled-components';
+import { Form as DefaultForm } from 'formik';
 
 export const GeneralContainer = styled.div`
   text-align: center;
@@ -8,7 +8,6 @@ export const GeneralContainer = styled.div`
   height: 100vh;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   /* background-image: url("https://st2.depositphotos.com/2853475/7544/i/950/depositphotos_75445475-stock-photo-close-up-on-a-cocktail.jpg"); */
@@ -37,9 +36,9 @@ export const FormContainer = styled.div`
   height: 100vh;
   align-items: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   background-color: ${({ theme }) => theme.colors.black};
-  background-image: url("https://img.freepik.com/foto-gratis/mojito-ingredientes_144627-29934.jpg");
+  background-image: url('https://img.freepik.com/foto-gratis/mojito-ingredientes_144627-29934.jpg');
   background-size: cover;
 `;
 
@@ -51,7 +50,7 @@ export const Form = styled(DefaultForm)`
   border-radius: 10px;
   height: 32rem;
   width: 22.5rem;
-  margin-top: 6.25rem;
+  margin-top: 1rem;
   margin-left: 2rem;
   margin-right: 1.7rem;
   font-family: Oswald;
@@ -132,4 +131,11 @@ export const Return = styled.p`
 export const StyledLink = styled.a`
   /* text-decoration: none; */
   color: ${({ theme }) => theme.colors.GriffindorYellow};
+`;
+
+export const TittleContainer = styled.h1`
+  font-family: oswald;
+  justify-content: center;
+  display: flex;
+  color: black;
 `;

@@ -1,14 +1,25 @@
-import { FC } from "react";
+import { FC, useCallback, useState } from 'react';
+import { syncCategories } from '../../services/api/categories';
 import {
   ButtonBoxes,
+  SyncButton,
   WelcomeButton,
   WelcomeContainer,
   WelcomeMessage,
-} from "./styles";
+} from './styles';
 
 const Landing: FC = () => {
+  const [isloading, setIsLoading] = useState<boolean>(false);
+  const syncData = useCallback(async () => {
+    await syncCategories();
+    setIsLoading(false);
+  }, []);
+  if (isloading) {
+    return <h1>LOADING</h1>;
+  }
   return (
     <WelcomeContainer>
+      <SyncButton onClick={syncData}>Sync Categories</SyncButton>
       <WelcomeMessage>Select the desired info</WelcomeMessage>
       <ButtonBoxes>
         <WelcomeButton to="/categories">Categories</WelcomeButton>

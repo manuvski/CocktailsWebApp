@@ -8,9 +8,11 @@ export type PostInput = {
 
 export const normalizePost = (input: PostResponse) => {
   return {
+    id: input?.id || "",
     title: input?.title || "",
     image: input?.image || "",
     comment: input?.comment || "",
+    isFav: input?.isFav || false
   };
 };
 
