@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const Container = styled.div`
-border:1px solid white;
+  border: 1px solid blueviolet;
+  background-color: white;
+  border-radius: 10px;
 `;
 
 export const ImageContainer = styled.img`
@@ -11,6 +13,7 @@ export const ImageContainer = styled.img`
   margin-top: 40px;
   margin-bottom: 5px;
   border-radius: 6px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.9); /* Agregando box-shadow para dar efecto de iluminación */
 `;
 
 export const Description = styled.p`
@@ -20,7 +23,7 @@ export const Description = styled.p`
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.DementorBlack};
 `;
 
 export const DescriptionApi = styled.p`
@@ -54,4 +57,3 @@ export const EditButton = styled.button`
   padding: 5px 5px;
   font-family: Oswald;
 `;
-

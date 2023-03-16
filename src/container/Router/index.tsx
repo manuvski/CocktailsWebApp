@@ -1,20 +1,18 @@
-import { FC } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Welcome from "../../views/Welcome";
-import LoginForm from "../../views/Auth/Login";
-import SignupForm from "../../views/Auth/Signup";
-import Navbar from "../../components/Navbar";
-import { getToken } from "../../services/storage";
-import { useLocation, Navigate } from "react-router-dom";
-import ProfileView from "../../views/Profile";
-import Landing from "../../views/LandingPage";
-import Categories from "../../views/Categories";
-import OrdinaryDrinks from "../../views/CategoryDetails";
-import Random from "../../views/Random";
-import CreationForm from "../../views/Creation";
-import Posts from "../../views/PostView";
-
-
+import { FC } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Welcome from '../../views/Welcome';
+import LoginForm from '../../views/Auth/Login';
+import SignupForm from '../../views/Auth/Signup';
+import Navbar from '../../components/Navbar';
+import { getToken } from '../../services/storage';
+import { useLocation, Navigate } from 'react-router-dom';
+import ProfileView from '../../views/Profile';
+import Landing from '../../views/LandingPage';
+import Categories from '../../views/Categories';
+import OrdinaryDrinks from '../../views/CategoryDetails';
+import Random from '../../views/Random';
+import CreationForm from '../../views/Creation';
+import Posts from '../../views/PostView';
 
 const Router: FC = () => {
   const ProtectedRoutes = ({ children }: { children: JSX.Element }) => {
@@ -33,9 +31,9 @@ const Router: FC = () => {
 
     if (token) {
       if (
-        location.pathname === "/signup" ||
-        location.pathname === "/login" ||
-        location.pathname === "/"
+        location.pathname === '/signup' ||
+        location.pathname === '/login' ||
+        location.pathname === '/'
       ) {
         return <Navigate to="/landing" replace state={{ from: location }} />;
       }
@@ -52,24 +50,21 @@ const Router: FC = () => {
             <HandleSession>
               <Welcome />
             </HandleSession>
-          }
-        ></Route>
+          }></Route>
         <Route
           path="/login"
           element={
             <HandleSession>
               <LoginForm />
             </HandleSession>
-          }
-        ></Route>
+          }></Route>
         <Route
           path="/signup"
           element={
             <HandleSession>
               <SignupForm />
             </HandleSession>
-          }
-        ></Route>
+          }></Route>
         <Route
           path="/landing"
           element={
@@ -79,9 +74,8 @@ const Router: FC = () => {
                 <Landing />
               </>
             </ProtectedRoutes>
-          }
-        ></Route>
-         <Route
+          }></Route>
+        <Route
           path="/categories"
           element={
             <ProtectedRoutes>
@@ -90,9 +84,8 @@ const Router: FC = () => {
                 <Categories />
               </>
             </ProtectedRoutes>
-          }
-        ></Route>
-         <Route
+          }></Route>
+        <Route
           path="/categories/:id"
           element={
             <ProtectedRoutes>
@@ -101,9 +94,8 @@ const Router: FC = () => {
                 <OrdinaryDrinks />
               </>
             </ProtectedRoutes>
-          }
-        ></Route>
-         <Route
+          }></Route>
+        <Route
           path="/random"
           element={
             <ProtectedRoutes>
@@ -112,9 +104,8 @@ const Router: FC = () => {
                 <Random />
               </>
             </ProtectedRoutes>
-          }
-        ></Route>
-          <Route
+          }></Route>
+        <Route
           path="/creation"
           element={
             <ProtectedRoutes>
@@ -123,9 +114,8 @@ const Router: FC = () => {
                 <CreationForm />
               </>
             </ProtectedRoutes>
-          }
-        ></Route>
-         <Route
+          }></Route>
+        <Route
           path="/post"
           element={
             <ProtectedRoutes>
@@ -134,8 +124,7 @@ const Router: FC = () => {
                 <Posts />
               </>
             </ProtectedRoutes>
-          }
-        ></Route>
+          }></Route>
         <Route
           path="/profile"
           element={

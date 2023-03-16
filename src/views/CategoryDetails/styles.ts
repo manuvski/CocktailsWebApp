@@ -1,24 +1,24 @@
-import styled, { css } from "styled-components";
+import styled from 'styled-components';
 
 export const GeneralContainer = styled.div`
   text-align: center;
-  background-color: #282c34;
-  display: block;
-  height: 100%;
+  padding-top: 60px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  flex-direction: row;
+  justify-content: flex-start;
+  background-image: url('https://i.ibb.co/FxKbYzw/peakpx.jpg');
+  background-repeat: repeat-y;
 `;
 
 export const CategoryContainer = styled.div`
   padding: 5em;
   padding-top: 5px;
   padding-bottom: 25px;
-  
 `;
+
 export const Container = styled.div`
   padding: 5em;
   padding-top: 5px;
@@ -28,71 +28,20 @@ export const Container = styled.div`
   gap: 24px;
 `;
 
-
 export const Image = styled.img`
   width: 175px;
   height: 250px;
 `;
 
-export const InputContainer = styled.div`
-  display: flex;
-  flex-flow: column;
-  color: ${({ theme }) => theme.colors.white100};
-  &:not(:first-child) {
-    margin-top: 16px;
-  }
-`;
-
-export const Input = styled.input<{ $hasError?: boolean }>`
-  padding: 10px;
-  margin: 10px;
-  border: none; /* eliminar el borde predeterminado */
-  border-bottom: 1px solid ${({ theme }) => theme.colors.white100}; /* agregar borde inferior */
-  background: transparent; /* hacer el fondo transparente */
-  color: ${({ theme }) =>
-    theme.colors.white100}; /* establecer el color de texto */
-  padding: 10px 14px;
-
-  ${({ $hasError, theme }) =>
-    $hasError &&
-    css`
-      color: ${theme.colors.GriffindorYellow};
-      border-bottom-color: ${theme.colors
-        .GriffindorYellow}; /* agregar borde inferior amarillo cuando hay un error */
-    `}
-`;
-
-export const Label = styled.label`
-  color: gray;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 16px;
-  color: ${({ theme }) => theme.colors.white100};
-`;
-
-export const Error = styled.span`
-  color: red;
-  font-size: 12px;
-  font-weight: 500;
-  margin-top: 8px;
-  margin-left: 15px;
-  color: ${({ theme }) => theme.colors.GriffindorYellow};
-`;
-
-export const EditButton = styled.button`
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 16px;
-  padding: 5px;
-  font-family: Oswald;
-  background-color: ${({ theme }) => theme.colors.GriffindorGold};
-`;
-
 export const ButtonBack = styled.button`
+  position: absolute;
+  top: 90px;
+  left: 10px;
   width: 90px;
   height: 40px;
   border-radius: 5px;
   margin: 10px;
+  font-family: oswald;
   cursor: pointer;
-  background: linear-gradient(315deg, #9d523c 0%, #f2a65a 74%);
+  background: linear-gradient(315deg, #ffffff 0%, #ffffff 74%);
 `;

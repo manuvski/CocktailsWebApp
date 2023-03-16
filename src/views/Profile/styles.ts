@@ -1,36 +1,40 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const App = styled.div`
+export const GeneralContainer = styled.div`
+  padding-top: 20px;
   text-align: center;
   background-color: #282c34;
+  background-image: url('https://img.freepik.com/foto-gratis/coctel-gin-tonic-vaso-sobre-mesa-madera_123827-21895.jpg');
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: cover; /* Hace que la imagen cubra todo el fondo sin distorsionarse */
   display: flex;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 `;
 export const Container = styled.div`
-  background: linear-gradient(315deg, #9d523c 0%, #f2a65a 74%);
+  background: linear-gradient(315deg, #878787 0%, #d3d3d3 74%);
   flex: 0 0 300px;
   padding: 5px;
   padding-bottom: 25px;
   margin: 2em;
   border-radius: 20px;
-  box-shadow: 0 0 0 5px #740001;
+  box-shadow: 0 0 0 5px #fb1c11;
   text-align: center;
   position: relative;
   transition: all 0.3s ease-in-out;
   &:before {
-    content: "User Profile";
-    font-family: "Oswald";
+    content: 'User Profile';
+    font-family: 'Oswald';
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: 0.5px;
     border-radius: 20px;
-    background: linear-gradient(to top, #740001 0%, #740001 74%);
+    background: linear-gradient(to top, #000000 0%, #fff 0%);
     position: absolute;
     z-index: 10;
     max-width: 225px;
@@ -47,6 +51,13 @@ export const Container = styled.div`
     transition: box-shadow 0.5s ease, transform 0.5s ease;
   }
 `;
+export const FavoriteContainer = styled.div`
+color: black;
+font-family: Oswald;
+font-size: 50px;
+background-color: white;
+border-radius: 20px;
+`
 
 export const SpinnerContainer = styled.h1``;
 
@@ -133,10 +144,14 @@ export const ButtonContainer = styled.div`
 `;
 
 export const ButtonBack = styled.button`
+  position: absolute;
+  top: 90px;
+  left: 10px;
   width: 90px;
   height: 40px;
   border-radius: 5px;
   margin: 10px;
+  font-family: oswald;
   cursor: pointer;
-  background: linear-gradient(315deg, #9d523c 0%, #f2a65a 74%);
+  background: linear-gradient(315deg, #ffffff 0%, #ffffff 74%);
 `;

@@ -1,9 +1,10 @@
 import { FC, useState, useCallback, useEffect, memo } from "react";
 import {
-  App,
   ButtonBack,
   ButtonContainer,
   Container,
+  FavoriteContainer,
+  GeneralContainer,
   Info,
   SpinnerContainer,
 } from "./styles";
@@ -36,7 +37,7 @@ const ProfileView: FC = () => {
   }
 
   return (
-    <App>
+    <GeneralContainer>
       <ButtonContainer>
         <ButtonBack onClick={goToBack}>Go Back!</ButtonBack>
       </ButtonContainer>
@@ -44,7 +45,8 @@ const ProfileView: FC = () => {
         <Info>ID: {userinfo?.id}</Info>
         <Info>EMAIL: {userinfo?.email}</Info>
       </Container>
-    </App>
+      <FavoriteContainer>❤️ 👇 Your Favorites 👇 ❤️</FavoriteContainer>
+    </GeneralContainer>
   );
 };
 

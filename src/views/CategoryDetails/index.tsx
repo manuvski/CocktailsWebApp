@@ -16,7 +16,9 @@ const CategoryDetails: FC = () => {
   if (isLoading) {
     return <p>LOADING</p>;
   }
+
 console.log(categoryName)
+
   return (
     <GeneralContainer>
       <BackContainer>
