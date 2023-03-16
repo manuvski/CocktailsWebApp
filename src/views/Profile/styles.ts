@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const App = styled.div`
   text-align: center;
@@ -23,8 +23,8 @@ export const Container = styled.div`
   position: relative;
   transition: all 0.3s ease-in-out;
   &:before {
-    content: 'User Profile';
-    font-family: 'Oswald';
+    content: "User Profile";
+    font-family: "Oswald";
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
@@ -140,29 +140,3 @@ export const ButtonBack = styled.button`
   cursor: pointer;
   background: linear-gradient(315deg, #9d523c 0%, #f2a65a 74%);
 `;
-
-export const Sections = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  gap: 16px;
-`;
-
-export const Section = styled.div``;
-
-export const SectionTitle = styled.h4`
-  margin-bottom: 16px;
-`;
-
-export const SectionContent = styled.div`
-  display: flex;
-  flex-flow: column;
-  gap: 16px;
-`;
-
-export const SectionCard = styled.div`
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 16px;
-`;
-
-export const SectionInfo = styled.h6``;

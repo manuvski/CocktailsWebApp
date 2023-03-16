@@ -6,7 +6,7 @@ import SignupForm from "../../views/Auth/Signup";
 import Navbar from "../../components/Navbar";
 import { getToken } from "../../services/storage";
 import { useLocation, Navigate } from "react-router-dom";
-import Profile from "../../views/Profile";
+import ProfileView from "../../views/Profile";
 import Landing from "../../views/LandingPage";
 import Categories from "../../views/Categories";
 import OrdinaryDrinks from "../../views/CategoryDetails";
@@ -142,7 +142,7 @@ const Router: FC = () => {
             <ProtectedRoutes>
               <>
                 <Navbar />
-                <Profile />
+                <ProfileView />
               </>
             </ProtectedRoutes>
           }
