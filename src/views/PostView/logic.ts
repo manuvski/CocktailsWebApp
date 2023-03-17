@@ -16,9 +16,12 @@ const useLogic = () => {
   const navigate = useNavigate();
 
   const getPostList = useCallback(async () => {
+    setIsLoading(true);
     const post = await getAllPosts();
-    console.log('post', post);
     setPosts(post);
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2000);
   }, []);
 
   useEffect(() => {
@@ -30,7 +33,6 @@ const useLogic = () => {
   }, [navigate]);
 
   const removePost = useCallback(async (id: string) => {
-    setIsLoading(true);
     await deletePost(id);
     setPosts((prev) =>
       prev.filter((item) => {
@@ -38,7 +40,6 @@ const useLogic = () => {
         return item.id !== id;
       })
     );
-    setIsLoading(false);
   }, []);
 
   return {

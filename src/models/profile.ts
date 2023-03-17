@@ -1,3 +1,5 @@
+import { strict } from "assert";
+
 export type ProfileInput = {
   password: string;
   email: string;
@@ -12,3 +14,21 @@ export const normalizeProfile = (input: any) => {
 };
 
 export type Profile = ReturnType<typeof normalizeProfile>;
+
+export type FavoritesInput = {
+  id:string,
+  title:string,
+  postCategory:string,
+  image:string,
+  comment:string,
+  user_FK:string,
+  createdAt:string,
+  // updatedAt:string,
+  // postUserFavorites = {
+  //   id:string,
+  //   user_favorites_FK: string,
+  //   post_favorite_FK: "4f133971-23ea-42ed-906c-2e08c9aa4b48",
+  //   createdAt: "2023-03-14T21:35:38.848Z",
+  //   updatedAt: "2023-03-14T21:35:38.848Z"
+  // }
+}

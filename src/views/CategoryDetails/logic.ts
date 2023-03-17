@@ -7,7 +7,7 @@ const useLogic = () => {
 
   const { id: categoryId } = useParams();
   const [cocktails, setCocktails] = useState<Cocktail[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isloading, setIsLoading] = useState<boolean>(false);
   const navigate = useNavigate();
   const location = useLocation()
 
@@ -17,8 +17,9 @@ const useLogic = () => {
       const drinks = await getCategoryDrinksById(id);
       console.log(drinks);
       setCocktails(drinks);
-      setIsLoading(false);
-    }
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 3000);    }
   }, []);
 
   const goToBack = useCallback(() => {
@@ -30,7 +31,7 @@ const useLogic = () => {
   }, [handleGetOrdinaryDrink, categoryId]);
 
     return{
-     isLoading,
+      isloading,
      handleGetOrdinaryDrink,
      cocktails,
      categoryName:location.state.name,

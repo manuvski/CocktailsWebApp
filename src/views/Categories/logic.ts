@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Category } from "../../models/categories";
 import { getCategories, syncCategories } from "../../services/api/categories";
 
+
 const useLogic = () => {
   const [categoryList, setCategoryList] = useState<Category[]>([]);
   const [isloading, setIsLoading] = useState<boolean>(false);
@@ -10,15 +11,20 @@ const useLogic = () => {
   const navigate = useNavigate();
 
   const getCategoriesList = useCallback(async () => {
+    setIsLoading(true)
     const categories = await getCategories();
-    console.log("categories", categories);
-    setCategoryList(categories);
+      setCategoryList(categories);
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 3000);
   }, []);
 
   const syncData = useCallback(async () => {
+    setIsLoading(true)
     await syncCategories();
-    setIsLoading(false);
-  }, []);
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 3000);  }, []);
 
   useEffect(() => {
     getCategoriesList();

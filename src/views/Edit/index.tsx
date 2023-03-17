@@ -15,11 +15,14 @@ import { validationSchema } from "./constants";
 import { useParams } from "react-router-dom";
 import { Post } from "../../models/post";
 import { getPostById, updatePost } from "../../services/api/post";
+import Stack from '@mui/material/Stack';
+import LinearProgress from '@mui/material/LinearProgress';
+
 
 const EditForm: FC = () => {
   const { id: postId } = useParams();
   const [post, setPost] = useState<Post | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isloading, setIsLoading] = useState<boolean>(false);
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
   const handleActiveEdition = useCallback(async () => {
@@ -34,8 +37,9 @@ const EditForm: FC = () => {
         if (editedPost) {
           setPost(editedPost);
         }
-        setIsLoading(false);
-      }
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 3000);      }
     },
     [postId, isEditing]
   );
@@ -54,16 +58,23 @@ const EditForm: FC = () => {
       setIsLoading(true);
       const post = await getPostById(id);
       setPost(post);
-      setIsLoading(false);
-    }
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 3000);    }
   }, []);
 
   useEffect(() => {
     handleGetPost(postId);
   }, [handleGetPost, postId]);
 
-  if (isLoading) {
-    return <p>LOADING</p>;
+  if (isloading) {
+    return (
+      <Stack sx={{ width: '50%', color: 'grey.500', marginTop:'10rem',margin:'0 auto' }} spacing={2}>
+      <LinearProgress color="secondary" />
+      <LinearProgress color="success" />
+      <LinearProgress color="inherit" />
+    </Stack>
+    )
   }
 
   return (

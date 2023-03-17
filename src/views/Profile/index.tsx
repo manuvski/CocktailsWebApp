@@ -11,6 +11,9 @@ import {
 import { getUserInfo } from "../../services/api/profile";
 import type { Profile } from "../../models/profile";
 import { useNavigate } from "react-router-dom";
+import Stack from '@mui/material/Stack';
+import LinearProgress from '@mui/material/LinearProgress';
+
 
 const ProfileView: FC = () => {
   const [userinfo, setUserInfo] = useState<Profile | null>(null);
@@ -21,8 +24,9 @@ const ProfileView: FC = () => {
     setIsLoading(true);
     const userprofile = await getUserInfo();
     setUserInfo(userprofile);
-    setIsLoading(false);
-  }, []);
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 3000);  }, []);
 
   const goToBack = useCallback(() => {
     navigate("/landing", { replace: true });
@@ -33,7 +37,13 @@ const ProfileView: FC = () => {
   }, [getProfileList]);
 
   if (isloading) {
-    return <SpinnerContainer>LOADING</SpinnerContainer>;
+    return (
+      <Stack sx={{ width: '50%', color: 'grey.500', marginTop:'10rem',margin:'0 auto' }} spacing={2}>
+      <LinearProgress color="secondary" />
+      <LinearProgress color="success" />
+      <LinearProgress color="inherit" />
+    </Stack>
+    )
   }
 
   return (

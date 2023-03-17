@@ -7,12 +7,20 @@ import {
   Container,
   GeneralContainer,
 } from './styles';
+import Stack from '@mui/material/Stack';
+import LinearProgress from '@mui/material/LinearProgress';
 
 const Categories: FC = () => {
   const { isloading, goToBack, categoryList, goToDetails } = useLogic();
 
   if (isloading) {
-    return <h1>LOADING</h1>;
+    return (
+      <Stack sx={{ width: '50%', color: 'grey.500', marginTop:'10rem',margin:'0 auto' }} spacing={2}>
+      <LinearProgress color="secondary" />
+      <LinearProgress color="success" />
+      <LinearProgress color="inherit" />
+    </Stack>
+    )
   }
 
   return (

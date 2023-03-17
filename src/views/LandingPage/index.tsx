@@ -7,15 +7,26 @@ import {
   WelcomeContainer,
   WelcomeMessage,
 } from './styles';
+import Stack from '@mui/material/Stack';
+import LinearProgress from '@mui/material/LinearProgress';
+
 
 const Landing: FC = () => {
   const [isloading, setIsLoading] = useState<boolean>(false);
   const syncData = useCallback(async () => {
     await syncCategories();
-    setIsLoading(false);
-  }, []);
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 3000);  }, []);
+
   if (isloading) {
-    return <h1>LOADING</h1>;
+    return (
+      <Stack sx={{ width: '50%', color: 'grey.500', marginTop:'10rem',margin:'0 auto' }} spacing={2}>
+      <LinearProgress color="secondary" />
+      <LinearProgress color="success" />
+      <LinearProgress color="inherit" />
+    </Stack>
+    )
   }
   return (
     <WelcomeContainer>
@@ -24,7 +35,6 @@ const Landing: FC = () => {
       <ButtonBoxes>
         <WelcomeButton to="/categories">Categories</WelcomeButton>
         <WelcomeButton to="/random">Get Random Cocktail!</WelcomeButton>
-        <WelcomeButton to="/creation">Post your cocktail</WelcomeButton>
         <WelcomeButton to="/post">All Post</WelcomeButton>
       </ButtonBoxes>
     </WelcomeContainer>
