@@ -3,7 +3,6 @@ import {
   Container,
   ContentWrapper,
   Description,
-  DetailsButton,
   HeartButton,
   ImageContainer,
   Title,
@@ -35,30 +34,8 @@ const PostCard: FC<Props> = ({
       />
         <Title>{title}</Title>
         <Description>{comment}</Description>
-
-        <DetailsButton>Ver detalles</DetailsButton>
       </ContentWrapper>
     </Container>
   );
 };
 export default PostCard;
-
-// const PostCard: FC<Props> = ({ title, image, comment }) => {
-//   const { isFavorited, toggleFavorite } = useLogic();
-//   return (
-//     <Container>
-//       <ImageContainer src={image} />
-//       <ContentWrapper>
-//         <HeartButton
-//           className={isFavorited ? 'active' : ''}
-//           onClick={toggleFavorite}
-//         />
-//         <Title>{title}</Title>
-//         <Description>{comment}</Description>
-//         <DetailsButton>Ver detalles</DetailsButton>
-//       </ContentWrapper>
-//     </Container>
-//   );
-// };
-
-// export default PostCard;

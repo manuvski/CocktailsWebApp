@@ -59,8 +59,6 @@ export const WelcomeButton = styled(Link)`
   background-image: url('https://i.ibb.co/h977WdD/COCKTAILS-APP-Mesa-de-trabajo-1.png');
   background-repeat: no-repeat;
   background-position: bottom;
-  /* background-size: 200px 200px; Establecer un tamaño específico */
-  /* background-position: center center; Centrar la imagen de fondo */
   /* Efecto de iluminación */
   &:hover {
     box-shadow: 0 0 10px 10px #f2a65a;

@@ -20,7 +20,6 @@ const Categories: FC = () => {
       <BackContainer>
         <ButtonBack onClick={goToBack}>Go Back!</ButtonBack>
       </BackContainer>
-      {/* <SyncButton onClick={syncData}>Sync Categories</SyncButton> */}
       <Container>
         {categoryList.map((category, index) => (
           <div key={index}>

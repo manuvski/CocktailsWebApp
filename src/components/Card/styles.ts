@@ -51,7 +51,6 @@ export const EditButton = styled.button`
   padding: 10px 20px;
   font-size: large;
   background-color: ${({ theme }) => theme.colors.DementorBlack};
-  /* color: ${({ theme }) => theme.colors.white}; */
   color: white;
   border-radius: 5px;
   text-decoration: none;

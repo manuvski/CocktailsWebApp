@@ -20,25 +20,6 @@ export const SignoutButton = styled.span`
     transform: translateY(-5px);
   }
 `;
-/* font-family: Oswald;
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  background: linear-gradient(315deg, #E8A808 0%, #DD1103 74%);
-  color: ${({ theme }) => theme.colors.White};
-  border: none;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    transform: translateY(-3px);
-  } */
 
 export const ProfileButton = styled.span`
   color: white;
@@ -54,26 +35,6 @@ export const ProfileButton = styled.span`
     transform: translateY(-5px);
   }
 `;
-/* font-family: Oswald;
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  background: linear-gradient(315deg, #E8A808 0%, #DD1103 74%);
-  color: ${({ theme }) => theme.colors.White};
-  border: none;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    transform: translateY(-3px);
-  }
-`; */
 
 export const Tittle = styled(Link)`
   padding-bottom: 16px;

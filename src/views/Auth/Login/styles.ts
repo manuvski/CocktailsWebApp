@@ -27,6 +27,12 @@ export const Form = styled(DefaultForm)`
   color: ${({ theme }) => theme.colors.white100};
 `;
 
+export const DivError = styled.span`
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+`;
+
 export const InputContainer = styled.div`
   display: flex;
   flex-flow: column;
@@ -99,6 +105,5 @@ export const Return = styled.p`
 `;
 
 export const StyledLink = styled.a`
-  /* text-decoration: none; */
   color: ${({ theme }) => theme.colors.GriffindorYellow};
 `;

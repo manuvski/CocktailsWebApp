@@ -13,13 +13,14 @@ export const login = async (values: { email: string; password: string }) => {
 
       body: JSON.stringify({ email: values.email, password: values.password }),
     });
-
+    console.log({response})
     if (response.ok) {
       const token = await response.json();
       setToken(token);
     } else {
-      const errorData = await response.json();
-      error = errorData.error;
+      
+      error = await response.json();
+      console.log({error})
     }
   } catch (error) {
     // eslint-disable-next-line no-ex-assign

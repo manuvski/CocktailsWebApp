@@ -98,6 +98,5 @@ export const Return = styled.p`
 `;
 
 export const StyledLink = styled.a`
-  /* text-decoration: none; */
   color: ${({ theme }) => theme.colors.GriffindorYellow};
 `;

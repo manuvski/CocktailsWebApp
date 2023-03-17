@@ -1,11 +1,11 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Random } from "../../models/random";
 import { getRandomCocktail } from "../../services/api/cocktails";   
 
 const useLogic = () => {
     const [randomCocktail, setRandomCocktail] = useState<Random[]>([]);
-    const [isloading, setIsLoading] = useState<boolean>(false);
+    const [isloading] = useState<boolean>(false);
     const navigate=useNavigate()
 
     const goToBack = useCallback(() => {
@@ -17,10 +17,6 @@ const useLogic = () => {
         console.log('cocktail', cocktail)
         setRandomCocktail(cocktail);
       }, []);
-
-    //   useEffect(() => {
-    //     handleGetCocktail();
-    //   }, [handleGetCocktail]);
 
 
     return{

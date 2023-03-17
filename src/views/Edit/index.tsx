@@ -77,7 +77,6 @@ const EditForm: FC = () => {
             </EditButton>
           )}
           <Formik
-            // type="edit"
             validationSchema={validationSchema}
             onSubmit={onEditCharacter}
             initialValues={initialValues}

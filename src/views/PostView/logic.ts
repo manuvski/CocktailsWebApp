@@ -21,12 +21,6 @@ const useLogic = () => {
     setPosts(post);
   }, []);
 
-  //   const syncData = useCallback(async () => {
-  //     await syncCategories();
-  //     setIsLoading(false);
-  //     getCategoriesList();
-  //   }, []);
-
   useEffect(() => {
     getPostList();
   }, [getPostList]);

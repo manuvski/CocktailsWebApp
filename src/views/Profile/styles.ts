@@ -15,6 +15,7 @@ export const GeneralContainer = styled.div`
   font-size: calc(10px + 2vmin);
   color: black;
 `;
+
 export const Container = styled.div`
   background: linear-gradient(315deg, #878787 0%, #d3d3d3 74%);
   padding: 5px;

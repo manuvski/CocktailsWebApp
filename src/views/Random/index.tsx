@@ -18,7 +18,6 @@ const Random: FC = () => {
 
   return (
     <GeneralContainer>
-      {/* <ButtonBack onClick={goToBack}>Go Back!</ButtonBack> */}
       <BackContainer>
       <ButtonBack onClick={goToBack}>Go Back</ButtonBack>
       </BackContainer>
@@ -34,8 +33,6 @@ const Random: FC = () => {
               category={cocktail.category}
               isAlcoholic={cocktail.isAlcoholic}
               description={cocktail.description}
-              //  instrucctions={cocktail.instrucctions}
-              //  ingredients={cocktail.ingredients}
             />
           </div>
         ))}
